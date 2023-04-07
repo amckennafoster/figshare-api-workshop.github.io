@@ -12,7 +12,7 @@ layout: default
  - [The API Web Interface](./another-page.html)
 
 ## API Methods - Retrieving and Submitting Information
-[API methods](./api-methods.html)
+[API methods](.api-methods/api-methods.html)
 
 ## Formatting JSON Inputs and Outputs
 [Formatting JSON inputs and outputs](./another-page.html)
