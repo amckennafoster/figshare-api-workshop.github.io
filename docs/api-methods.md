@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: lesson
 ---
 
 ## Summary of GET, POST, PUT, DELETE methods 
