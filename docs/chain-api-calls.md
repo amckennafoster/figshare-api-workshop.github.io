@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 # Chain api calls to retrieve information
 
 The follow steps are required to retrieve metadata or files from multiple items:
