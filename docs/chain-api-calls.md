@@ -8,8 +8,31 @@ The follow steps are required to retrieve metadata or files from multiple items:
 - Create a list of item ids
 - Loop through the list and gather the information needed for each item id 
 
-## Code to retrieve item ids by:
-### Search query
+The code below loops through a list of item ids using [for loops](https://wiki.python.org/moin/ForLoop).
+
+## First retrieve item ids
+
+### Retrieve item ids in your account
+```py
+import json
+import requests
+#Retrieve list of private metadata for 50 items. This is for unpublished and published records.
+#Set the base URL
+BASE_URL = 'https://api.figshare.com/v2'
+#Set the token in the header
+api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
+#Get items owned by account
+r=requests.get(BASE_URL + '/account/articles?page=1&page_size=50', headers=api_call_headers) 
+items=json.loads(r.text)
+if r.status_code != 200:
+    print('Something is wrong:',r.content)
+else:
+    print('Collected',len(items),'metadata records')
+#Create a list of all the item ids
+item_ids = [item['id'] for item in items]  
+```
+
+### Retrieve item ids through a search query
 This example searches for records with that use the category 'Digital Humanities' or 'Environmental Humanities'
 
 ```py
@@ -36,29 +59,9 @@ item_ids_unique = list( dict.fromkeys(item_ids) )
 print(len(item_ids)-len(item_ids_unique),'duplicate records removed,',len(item_ids_unique),'unique records remain')
 ```
 
-### Your account
-```py
-import json
-import requests
-#Retrieve list of private metadata for 50 items. This is for unpublished and published records.
-#Set the base URL
-BASE_URL = 'https://api.figshare.com/v2'
-#Set the token in the header
-api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
-#Get items owned by account
-r=requests.get(BASE_URL + '/account/articles?page=1&page_size=50', headers=api_call_headers) 
-items=json.loads(r.text)
-if r.status_code != 200:
-    print('Something is wrong:',r.content)
-else:
-    print('Collected',len(items),'metadata records')
-#Create a list of all the item ids
-item_ids = [item['id'] for item in published_records]  
-```
+### Retrieve item ids in a group ???
 
-### A group
-
-## Code to gather additional info based on a list of item ids
+## Now gather inforamtion for those item ids
 
 ### Full metadata
 Use one of the methods above to create a list of item ids called item_ids. This API call includes a token in the header in case some of the item ids are for unpublished records
@@ -78,6 +81,8 @@ for id_value in item_ids:
     r=requests.get(BASE_URL + '/account/articles/' + str(id_value), headers=api_call_headers)
     metadata=json.loads(r.text)
     full_records.append(metadata) #Add the collected metadata record to the master list of records
+
+print(len(full_records),metadata records collected)
 ```
 
 ### Views and Downloads, timeline, locations
