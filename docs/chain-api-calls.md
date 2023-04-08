@@ -22,21 +22,59 @@ for i in categories:
     for j in range(1,10):
         records = json.loads(requests.post(BASE_URL + '/articles/search?page_size=1000&page={}'.format(j), params=y).content)
         results.extend(records) #add the retrieved records to the list of records
-#See the number of articles
-print(len(results),'articles retrieved')
+#See the number of items
+print(len(results),'items retrieved')
 
-#Create a list of all the article ids
+#Create a list of all the item ids
 item_ids = [item['id'] for item in published_records]  
 #Remove duplicates by converting to a dictionary and back to a list
 item_ids_unique = list( dict.fromkeys(item_ids) ) 
 print(len(item_ids)-len(item_ids_unique),'duplicate records removed,',len(item_ids_unique),'unique records remain')
 ```
 
-### An account
+### Your account
+```py
+import json
+import requests
+#Retrieve list of private metadata for 50 items. This is for unpublished and published records.
+#Set the base URL
+BASE_URL = 'https://api.figshare.com/v2'
+#Set the token in the header
+api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
+#Get items owned by account
+r=requests.get(BASE_URL + '/account/articles?page=1&page_size=50', headers=api_call_headers) 
+items=json.loads(r.text)
+if r.status_code != 200:
+    print('Something is wrong:',r.content)
+else:
+    print('Collected',len(items),'metadata records')
+#Create a list of all the item ids
+item_ids = [item['id'] for item in published_records]  
+```
+
 ### A group
 
 ## Code to gather additional info based on a list of item ids
 
 ### Full metadata
+Use one of the methods above to create a list of item ids called item_ids. This API call includes a token in the header in case some of the item ids are for unpublished records
+
+```py
+import json
+import requests
+#Set the base URL
+BASE_URL = 'https://api.figshare.com/v2'
+#Set the token in the header
+api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
+
+#---INSERT CODE TO COLLECT ITEM IDS HERE----
+
+full_records = [] #Create a blank list to hold the JSON metadata records
+for id_value in item_ids: 
+    r=requests.get(BASE_URL + '/account/articles/' + str(id_value), headers=api_call_headers)
+    metadata=json.loads(r.text)
+    full_records.append(metadata) #Add the collected metadata record to the master list of records
+```
+
 ### Views and Downloads, timeline, locations
 ### Download file(s)
