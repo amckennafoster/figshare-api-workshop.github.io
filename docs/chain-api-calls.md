@@ -8,7 +8,7 @@ The follow steps are required to retrieve metadata or files from multiple items:
 ### Search query
 This example searches for records with that use the category 'Digital Humanities' or 'Environmental Humanities'
 
-'''py
+```py
 import json
 import requests
 categories = ["'Digital Humanities'","'Environmental Humanities'"]
@@ -25,15 +25,12 @@ for i in categories:
 #See the number of articles
 print(len(results),'articles retrieved')
 
-#Create a dataframe from the JSON formatted data
-df_results = pd.DataFrame(results)
-df = df_results.drop_duplicates(subset='id', keep="first")
-print(len(df)-len(df_results),'records removed,',len(df),'unique records remain')
-#Create a list of all the item ids
-item_ids = df['id'].tolist()
-#See the number of ids
-print(len(article_ids),'ids in list')
-'''
+#Create a list of all the article ids
+item_ids = [item['id'] for item in published_records]  
+#Remove duplicates by converting to a dictionary and back to a list
+item_ids_unique = list( dict.fromkeys(item_ids) ) 
+print(len(item_ids)-len(item_ids_unique),'duplicate records removed,',len(item_ids_unique),'unique records remain')
+```
 
 ### An account
 ### A group
