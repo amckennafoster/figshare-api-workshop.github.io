@@ -8,6 +8,8 @@ layout: default
 ### Return results (GET)
 
 ```py
+import json
+import requests
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
 ITEM_ID = 123456
@@ -23,6 +25,8 @@ print(metadata)
 ### Authenticate (GET, POST, PUT, DELETE)
 
 ```py
+import json
+import requests
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
 #Set the token in the header
@@ -38,7 +42,9 @@ print(metadata)
 ### Send parameters (POST, PUT)
 
 ```py
-#Set the base URL
+import json
+import requests
+#Set the base URL and item id
 BASE_URL = 'https://api.figshare.com/v2'
 ITEM_ID = 123456
 #Set the token in the header
@@ -55,6 +61,8 @@ if r.status_code == 201: #If Post was successful
 ### Impersonate (GET, POST, PUT, DELETE)
 
 ```py
+import json
+import requests
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
 #Set the token in the header -this must be from an administrator account for impersonation
