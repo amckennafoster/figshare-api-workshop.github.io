@@ -5,7 +5,10 @@ layout: lesson
 ## Summary of GET, POST, PUT, DELETE methods 
 
 ## Example code
+
 ### Return results (GET)
+
+Any public metadata or files can be retrieved through the API without authentication. In the example below, the full metadata record for an item is retrieved. The ITEM_ID is the number at the end of any item's URL.
 
 ```py
 import json
@@ -24,6 +27,8 @@ print(metadata)
 
 ### Authenticate (GET, POST, PUT, DELETE)
 
+Authentication is required for any endpoint that retrieves or accepts private or institutional information. A token can be [created for any user account](https://help.figshare.com/article/how-to-get-a-personal-token) and provides access in line with the account's privileges. In the example below, a user retrieves 10 basic metadata records from their personal account. These records may include both public and private (draft) records. Note that the results are limited to 10 by using the page and page_size parameters. 
+
 ```py
 import json
 import requests
@@ -40,6 +45,8 @@ print(metadata)
 ```
 
 ### Send parameters (POST, PUT)
+
+Sending information through a POST or PUT endpoint is accomplished by adding a 'data' variable to the request. The contents of the data variable needs to be formatted as indicated by the documentation for the API endpoint. 
 
 ```py
 import json
@@ -60,6 +67,8 @@ if r.status_code == 201: #If Post was successful
 
 ### Impersonate (GET, POST, PUT, DELETE)
 
+Impersonation is acheived by adding "impersonate":*account id to impersonate* to the parameter content. You must authenticate with a token created from an administrator account for this to work. In the example below, a new record is created in a user account by adding "impersonate" = account_id to the metadata sent to create the new record.
+
 ```py
 import json
 import requests
@@ -69,13 +78,12 @@ BASE_URL = 'https://api.figshare.com/v2'
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 #Get the author info from this endpoint: https://docs.figshare.com/#private_institution_accounts_list
 account_id = ENTER ACCOUNT ID #This is 'id' in the endpoint output and is the account id for impersonation
-ITEM_ID = 123456
 #Create json formatted for upload
 sample_metadata = {"title":"Test metadata for upload","keywords":["biodiversity","invertebrate"]}
 json_metadata = json.dumps(sample_metadata)
 json_metadata["impersonate"] = account_id #Adding this to the metadata for upload enables impersonation
 #Create a private item in the user account
-r = requests.post(BASE_URL + '/account/articles' + str(ITEM_ID), headers=api_call_headers, data = json_metadata)
+r = requests.post(BASE_URL + '/account/articles', headers=api_call_headers, data = json_metadata)
 if r.status_code == 201: #If Post was successful
   print('Successfully created item')
 ```
