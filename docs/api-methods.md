@@ -10,9 +10,6 @@ layout: lesson
 
 Any public metadata or files can be retrieved through the API without authentication. In the example below, the full metadata record for an item is retrieved. The ITEM_ID is the number at the end of any item's URL.
 
-<details>
-<summary>
-
 Python:
 ```py
 import json
@@ -28,7 +25,6 @@ metadata=json.loads(s.text)
 print(json.dumps(metadata, indent=2))
 ```
 
-</summary>
 Output:
 ```
 {
@@ -163,7 +159,7 @@ Output:
   "resource_doi": "10.1371/journal.pone.0039704"
 }
 ```
-</details>
+
 
 
 
