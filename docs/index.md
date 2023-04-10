@@ -2,14 +2,14 @@
 layout: default
 ---
 
-# Modules
+# Figshare API Resources
 
-## API documentation
+## How To Use The API
 
 - [Understanding the API documentation](./understanding-api-documentation.html)
 - [API methods](./api-methods.html)
-- [Chaining API Calls](./chain-api-calls.html)
-- [Formatting JSON inputs and outputs](./another-page.html)
+- [Chaining API calls](./chain-api-calls.html)
+- [Formatting JSON inputs and outputs](./formatting.html)
 
 ## Example Workflows
 - [Gather records from a specific group and output a list of item ids](./another-page.html)
