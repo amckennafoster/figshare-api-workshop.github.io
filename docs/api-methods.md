@@ -4,7 +4,7 @@ layout: lesson
 
 ## Summary of GET, POST, PUT, DELETE methods 
 
-## Example code
+This page has example code snippets demonstrating how to send and retrieve information through the Figshare API
 
 ### Return results (GET)
 
@@ -426,7 +426,7 @@ if r.status_code == 201: #If Post was successful
 
 ### Impersonate (GET, POST, PUT, DELETE)
 
-Impersonation is acheived by adding "impersonate":*account id to impersonate* to the parameter content. You must authenticate with a token created from an administrator account for this to work. In the example below, a new record is created in a user account by adding "impersonate" = account_id to the metadata sent to create the new record.
+Impersonation is acheived by adding "impersonate":*account id to impersonate* to the parameter content. You must authenticate with a token created from an administrator account for this to work. In the example below, an existing record is updated (using PUT) in a user account by adding "impersonate" = account_id to updated metadata values. *Note: for these metadata updates to be public, a second API endpoint should be used to publish the record. Or it can be done through the user interface.
 
 ```py
 import json
@@ -437,13 +437,15 @@ BASE_URL = 'https://api.figshare.com/v2'
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 #Get the author info from this endpoint: https://docs.figshare.com/#private_institution_accounts_list
 account_id = ENTER ACCOUNT ID #This is 'id' in the endpoint output and is the account id for impersonation
+#Set the item id for the record to be updated
+ITEM_ID = 123456
 #Create json formatted for upload
 sample_metadata = {"title":"Test metadata for upload","keywords":["biodiversity","invertebrate"]}
 json_metadata = json.dumps(sample_metadata)
 json_metadata["impersonate"] = account_id #Adding this to the metadata for upload enables impersonation
-#Create a private item in the user account
-r = requests.post(BASE_URL + '/account/articles', headers=api_call_headers, data = json_metadata)
-if r.status_code == 201: #If Post was successful
-  print('Successfully created item')
+#Update the private version of the item in the user account
+r = requests.put(BASE_URL + '/account/articles/' + str(ITEM_ID), headers=api_call_headers, data = json_metadata)
+if r.status_code == 201: #If Put was successful
+  print('Successfully updated item')
 ```
 
