@@ -432,6 +432,7 @@ if r.status_code == 201: #If Post was successful
 
 Impersonation is acheived by adding "impersonate":*account id to impersonate* to the parameter content. You must authenticate with a token created from an administrator account for this to work. In the example below, an existing record is updated (using PUT) in a user account by adding "impersonate" = account_id to updated metadata values. *Note: for these metadata updates to be public, a second API endpoint should be used to publish the record. Or it can be done through the user interface.
 
+Python:
 ```py
 import json
 import requests
