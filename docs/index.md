@@ -6,8 +6,7 @@ layout: default
 
 ## API documentation
 
-- [Understanding the API documentation](./another-page.html)
-- [The API Web Interface](./another-page.html)
+- [Understanding the API documentation](./understanding-api-documentation.html)
 - [API methods](./api-methods.html)
 - [Chaining API Calls](./chain-api-calls.html)
 - [Formatting JSON inputs and outputs](./another-page.html)
