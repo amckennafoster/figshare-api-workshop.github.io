@@ -2,11 +2,16 @@
 layout: lesson
 ---
 
-## Summary of GET, POST, PUT, DELETE methods 
+# Sending and Retrieving Information
 
-This page has example code snippets demonstrating how to send and retrieve information through the Figshare API
+This page has example code snippets demonstrating how to send and retrieve information through the Figshare API. The [documentation site](https://docs.figshare.com) has more details on all endpoints and includes information on GET, POST, PUT, and DELETE methods.
 
-### Return results (GET)
+[Return results](#return-results)
+[Authenticate](#authenticate
+[Send data]()
+
+
+### [Return results] (GET)
 
 Any public metadata or files can be retrieved through the API without authentication. In the example below, the full metadata record for an item is retrieved. The ITEM_ID is the number at the end of any item's URL.
 
@@ -163,7 +168,7 @@ Output:
 
 
 
-### Authenticate (GET, POST, PUT, DELETE)
+### [Authenticate] (GET, POST, PUT, DELETE)
 
 Authentication is required for any endpoint that retrieves or accepts private or institutional information. A token can be [created for any user account](https://help.figshare.com/article/how-to-get-a-personal-token) and provides access in line with the account's privileges. In the example below, a user retrieves 10 basic metadata records from their personal account. These records may include both public and private (draft) records. Note that the results are limited to 10 by using the page and page_size parameters. 
 
@@ -403,7 +408,7 @@ Output:
 ]
 ```
 
-### Send parameters (POST, PUT)
+### [Send data (POST, PUT)](#send-data)
 
 Sending information through a POST or PUT endpoint is accomplished by adding a 'data' variable to the request. The contents of the data variable needs to be formatted as indicated by the documentation for the API endpoint. In the example below, a new record is added to the account that created the token
 
@@ -424,7 +429,7 @@ if r.status_code == 201: #If Post was successful
   print('Successfully created item')
 ```
 
-### Impersonate (GET, POST, PUT, DELETE)
+### [Impersonate (GET, POST, PUT, DELETE)](#impersonate)
 
 Impersonation is acheived by adding "impersonate":*account id to impersonate* to the parameter content. You must authenticate with a token created from an administrator account for this to work. In the example below, an existing record is updated (using PUT) in a user account by adding "impersonate" = account_id to updated metadata values. *Note: for these metadata updates to be public, a second API endpoint should be used to publish the record. Or it can be done through the user interface.
 
