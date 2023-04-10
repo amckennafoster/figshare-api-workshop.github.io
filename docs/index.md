@@ -15,7 +15,7 @@ layout: default
 [API methods](./api-methods.html)
 
 ## API Methods - Chaining API Calls
-[API methods](./chain-api-calls.html)
+[Chaining API Calls](./chain-api-calls.html)
 
 ## Formatting JSON Inputs and Outputs
 [Formatting JSON inputs and outputs](./another-page.html)
