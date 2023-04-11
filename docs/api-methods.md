@@ -430,7 +430,7 @@ if r.status_code == 201: #If Post was successful
 
 ### Impersonate (GET, POST, PUT, DELETE)
 
-Impersonation is acheived by adding "impersonate":*account id to impersonate* to the parameter content. You must authenticate with a token created from an administrator account for this to work. In the example below, an existing record is updated (using PUT) in a user account by adding "impersonate" = account_id to updated metadata values. *Note: for these metadata updates to be public, a second API endpoint should be used to publish the record. Or it can be done through the user interface.
+Impersonation is acheived by adding "impersonate":*account id* to the data content. You must authenticate with a token created from an administrator account for this to work. In the example below, an existing record is updated (using PUT) in a user account by adding "impersonate" = account_id to updated metadata values. *Note: for these metadata updates to be public, a second API endpoint should be used to publish the record. Or it can be done through the user interface.*
 
 Python:
 ```py
@@ -444,13 +444,38 @@ api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorizat
 account_id = ENTER ACCOUNT ID #This is 'id' in the endpoint output and is the account id for impersonation
 #Set the item id for the record to be updated
 ITEM_ID = 123456
+
 #Create json formatted for upload
-sample_metadata = {"title":"Test metadata for upload","keywords":["biodiversity","invertebrate"]}
+sample_metadata = {}
+sample_metadata['title'] = 'Test metadata for upload'
+sample_metadata['keywords']=['biodiversity','invertebrate']
+sample_metadata["impersonate"] = account_id #Adding this to the metadata for upload enables impersonation
+
+#Convert the dictionary of metadata into json
 json_metadata = json.dumps(sample_metadata)
-json_metadata["impersonate"] = account_id #Adding this to the metadata for upload enables impersonation
+
 #Update the private version of the item in the user account
 r = requests.put(BASE_URL + '/account/articles/' + str(ITEM_ID), headers=api_call_headers, data = json_metadata)
-if r.status_code == 201: #If Put was successful
-  print('Successfully updated item')
+
+#Show what was sent and whether the change was successful
+print(json.dumps(sample_metadata, indent=2))
+if r.status_code == 205: #If Put was successful
+    print('Successfully updated item')
+    
+else:
+    print('Unsuccessful',r.content)
+```
+
+Output:
+```
+{
+  "title": "Test metadata for upload",
+  "keywords": [
+    "biodiversity",
+    "invertebrate"
+  ],
+  "impersonate": 1883674
+}
+Successfully updated item
 ```
 
