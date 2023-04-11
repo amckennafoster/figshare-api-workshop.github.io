@@ -10,9 +10,9 @@ The follow steps are required to retrieve metadata or files from multiple items:
 
 The code below loops through a list of item ids using [for loops](https://wiki.python.org/moin/ForLoop).
 
-[Retrieve item ids in your account](#retrieve-item-ids-in-your-account)
-[Retrieve item ids through a search query](#retrieve-item-ids-through-a-search-query)
-[Now gather inforamtion for those item ids](#now-gather-inforamtion-for-those-item-ids)
+- [Retrieve item ids in your account](#retrieve-item-ids-in-your-account)
+- [Retrieve item ids through a search query](#retrieve-item-ids-through-a-search-query)
+- [Now gather inforamtion for those item ids](#now-gather-inforamtion-for-those-item-ids)
  - [Full metadata](#full-metadata)
  - [Views and Downloads](#views-and-downloads)
  - [Download file(s)](#download-files)
@@ -68,7 +68,7 @@ print(len(item_ids)-len(item_ids_unique),'duplicate records removed,',len(item_i
 
 ### Retrieve item ids in a group ???
 
-## Now gather inforamtion for those item ids
+## Now gather information for those item ids
 
 ### Full metadata
 Use one of the methods above to create a list of item ids called item_ids. This API call includes a token in the header in case some of the item ids are for unpublished records
