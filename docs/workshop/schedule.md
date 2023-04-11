@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: lesson
 ---
 
 # Figshare API Workshop Schedule
