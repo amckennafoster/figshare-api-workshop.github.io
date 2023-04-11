@@ -4,9 +4,9 @@ layout: lesson
 
 # Understanding the API Documentation
 
-[Where is the documentation?](#where-is-the-documentation)
-[How to use the documentation](#how-to-use-the-documentation)
-[Interacting with the API user interface](#interacting-with-the-api-user-interface)
+- [Where is the documentation?](#where-is-the-documentation)
+- [How to use the documentation](#how-to-use-the-documentation)
+- [Interacting with the API user interface](#interacting-with-the-api-user-interface)
  - [Retrieve the full metadata for an item](#retrieve-the-full-metadata-for-an-item)
  - [Perform a metadata search](#perform-a-metadata-search)
  - [Authenticate and retrieve metadata from your account](#authenticate-and-retrieve-metadata-from-your-account)
