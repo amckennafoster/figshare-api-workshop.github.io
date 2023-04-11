@@ -4,11 +4,20 @@ layout: lesson
 
 # Understanding the API Documentation
 
+[Where is the documentation?](#where-is-the-documentation)
+[How to use the documentation](#how-to-use-the-documentation)
+[Interacting with the API user interface](#interacting-with-the-api-user-interface)
+ - [Retrieve the full metadata for an item](#retrieve-the-full-metadata-for-an-item)
+ - [Perform a metadata search](#perform-a-metadata-search)
+ - [Authenticate and retrieve metadata from your account](#authenticate-and-retrieve-metadata-from-your-account)
+ - [Administrators: See groups you administer](#administrators-see-groups-you-administer)
+
+
 ## Where is the documentation?
 
 The Figshare API is documented at [https://docs.figshare.com](https://docs.figshare.com). If you are an administrator at an institution, you have access to a stage version of the API as well.
 
-## How to read the documentation
+## How to use the documentation
 
 There are three panes on the documentation site
 1. Left side: Table of Contents with links to the endpoints and documentation sections
@@ -49,12 +58,6 @@ Figshare search will search all metadata fields by default. You can limit to dat
 ```
 
 ![image of figshare api documentation showing how to search for records](assets/api-search.jpg)
-
-### Download a file
-
-There are several ways to download files through the API. Each file that is part of a record has it's own download URL. You can find this URL in the full metadata retrieved above or you can enter the item id at this endpoint: [https://docs.figshare.com/#article_files](https://docs.figshare.com/#article_files). For item 4404725 the download URL for the file is https://ndownloader.figshare.com/files/7131113. Visiting that URL will automatically start the download (*Note: the file is 20MB so visit that URL only if you want to download the file!*).
-
-You can also start the download through a dedicated endpoint and all you need is the file id using one of the methods described above. Enter the file id at this endpoint and the download will begin: https://docs.figshare.com/#file_download. Try that with the file from this item (219KB): [https://doi.org/10.6084/m9.figshare.5616409.v3](https://doi.org/10.6084/m9.figshare.5616409.v3)
 
 ### Authenticate and retrieve metadata from your account
 
