@@ -4,7 +4,7 @@ layout: default
 
 # Figshare API Workshop Schedule
 
-| Time   |  Title                                                                         | Clock Start Time    |
+| Start  |  Title                                                                         | Duration            |
 | :---   |    :----                                                                       |              :---:  |
 | 9:30   | [Introductions](./workshop-introduction.html)                                  | 0:25                |
 | 9:55   | [Figshare API basics](./workshop-api-basics.html)                              | 0:30                |
