@@ -17,6 +17,7 @@ layout: default
 - [Gather records for one account and output a list of item ids](./another-page.html)
 - [Gather all metadata for a list of item ids and output both a json and CSV file](./another-page.html)
 - [Gather views and downloads for a list of items and output a CSV](./another-page.html)
+- [Batch format and upload metadata from a datasource](./batch-upload-from-source.html)
 
 ## Examples For Statistics Reporting
  - To be added
