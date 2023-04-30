@@ -4,18 +4,16 @@ layout: lesson
 
 # Chain api calls to retrieve information
 
-The follow steps are required to retrieve metadata or files from multiple items:
-- Create a list of item ids
-- Loop through the list and gather the information needed for each item id 
-
-The code below loops through a list of item ids using [for loops](https://wiki.python.org/moin/ForLoop).
-
-- [Retrieve item ids in your account](#retrieve-item-ids-in-your-account)
-- [Retrieve item ids through a search query](#retrieve-item-ids-through-a-search-query)
-- [Now gather inforamtion for those item ids](#now-gather-inforamtion-for-those-item-ids)
+The page illustrates how to use multiple API calls to retrieve metadata or files from multiple items. The basic idea is to:
+1. Create a list of item ids
+ - [Retrieve item ids in your account](#retrieve-item-ids-in-your-account)
+ - [Retrieve item ids through a search query](#retrieve-item-ids-through-a-search-query)
+2. Loop through the list and gather the information needed for each item id 
  - [Full metadata](#full-metadata)
  - [Views and Downloads](#views-and-downloads)
  - [Download file(s)](#download-files)
+
+The code loops through a list of item ids using ["for loops"](https://wiki.python.org/moin/ForLoop).
 
 ## First retrieve item ids
 
