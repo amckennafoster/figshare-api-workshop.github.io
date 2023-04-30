@@ -20,7 +20,7 @@ Python:
 ```py
 import json
 import requests
-#Set the base URL
+#Set the base URL and ITEM_ID
 BASE_URL = 'https://api.figshare.com/v2'
 ITEM_ID = 123456
 #Retrieve public metadata from the endpoint
@@ -415,7 +415,7 @@ Python:
 ```py
 import json
 import requests
-#Set the base URL and item id
+#Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
 #Set the token in the header
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
