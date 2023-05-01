@@ -58,13 +58,38 @@ for i in categories:
 print(len(results),'items retrieved')
 
 #Create a list of all the item ids
-item_ids = [item['id'] for item in published_records]  
+item_ids = [item['id'] for item in results]  
 #Remove duplicates by converting to a dictionary and back to a list
 item_ids_unique = list( dict.fromkeys(item_ids) ) 
 print(len(item_ids)-len(item_ids_unique),'duplicate records removed,',len(item_ids_unique),'unique records remain')
 ```
 
-### Retrieve item ids in a group ???
+### Retrieve item ids in a group
+If you are at an institution (or not!), you may want to gather all the items in a particular group. The script below does just that. *Note: It only returns items published in the specific group. It does not return results for subgroups*
+
+```py
+BASE_URL = "https://api.figshare.com/v2"
+
+INST_ID = 319 #Institution ID, this example is for Iowa State University. You don't have to include this- Group is is enough
+GRP_ID = 11962 #Group ID, this example is for the Iowa State University Agriculture Group.
+
+#Gather basic metadata for items (articles) that meet your search criteria
+results = [] #create a blank list
+query = '{"institution": ' + str(INST_ID) + ',"group": ' + str(GRP_ID) + '}'
+y = json.loads(query) #Figshare API requires json paramaters
+
+#The number of results is unknown but you can collect up to 9,000 results. This sets the page size to 1000 results and calls the API 
+#to retrieve 9 pages of results
+for j in range(1,10):
+    records = json.loads(requests.post(BASE_URL + '/articles/search?page_size=1000&page={}'.format(j), params=y).content)
+    results.extend(records) #add the retrieved records to the list of records
+
+#See the number of items
+print(len(results),'items retrieved')
+
+#Create a list of all the item ids
+item_ids = [item['id'] for item in results] 
+```
 
 ## Now gather information for those item ids
 
@@ -92,7 +117,46 @@ print(len(full_records),metadata records collected)
 
 ### Views and Downloads
 
-To be added
+The options for views, downloads, and shares are described here: [https://docs.figshare.com/#stats](https://docs.figshare.com/#stats). Note that the endpoints for Breakdown and Timeline require a special administrator authentication that you can request for your institution through [https://support.figshare.com](https://support.figshare.com).
+
+In the example below, the total views and downloads for each item id are collected. *Note that this script uses the pandas package to create a table of values.*
+
+```py
+import json
+import requests
+import pandas as pd 
+
+#Set the base URL
+BASE_URL = 'https://api.figshare.com/v2'
+#Set the token in the header
+api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
+
+#---INSERT CODE TO COLLECT ITEM IDS HERE----
+
+stats = [] #This list will hold a dictionary for each item_id
+
+for i in item_ids:
+    #make two api calls to retrieve total views and total downloads
+    r=requests.get('https://stats.figshare.com/total/views/article/'+ str(i))
+    views=json.loads(r.text)
+    r=requests.get('https://stats.figshare.com/total/downloads/article/'+ str(i))
+    downloads=json.loads(r.text)
+    #Add the item_id, views, and downloads as a dictionary and add to the stats list.
+    item_stats = {"item_id":i,"total_views":views['totals'],"total_downloads":downloads['totals']}
+    stats.append(item_stats)
+    
+#Convert the list of dictionaries to a dataframe
+df = pd.DataFrame(stats)
+
+#Show the top three rows of the dataframe
+df.head(3)
+```
+
+Output:
+||item_ids |total_views |total_downloads |
+|----|--------:|--------:|--------:|
+|0|13259588|243|54|
+|1|1138718|7552|3030|
 
 ### Download file(s)
 
