@@ -6,7 +6,7 @@ layout: lesson
 
 | Start  |  Title                                                                         | Duration            |
 | :---   |    :----                                                                       |              :---:  |
-| 9:30   | [Introductions](./workshop-introduction.html)                                  | 0:25                |
+| 9:30   | [Introductions - Technology Check](./workshop-introduction.html)               | 0:25                |
 | 9:55   | [Figshare API basics](./workshop-api-basics.html)                              | 0:30                |
 | 10:25  | Five minute break                                                              | 0:05                |
 | 10:30  | [Programmatically retrieve metadata](./workshop-retrieve.html)                 | 0:50                |
