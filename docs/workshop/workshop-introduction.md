@@ -20,7 +20,7 @@ The examples in this workshop are mostly in Python. Examples using other languag
 2. Have a Google account and use Google Colab.
 
 ### Sandbox Instance
-If you are at an institution that uses Figshare, it may be beneficial to use your institution's sandbox. If that is not available or you institution does not use Figshare, we will give you access to our Global University sandbox. You can also use a free Figshare account for many of the examples.
+If you are at an institution that uses Figshare, it may be beneficial to use your institution's sandbox. If that is not available or your institution does not use Figshare, we will provide access to our Global University sandbox. You can also use a free Figshare account for many of the examples.
 
 ![Image of the Global University Sandbox](../assets/global-univ-sandbox.jpg)
 
