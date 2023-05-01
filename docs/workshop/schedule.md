@@ -16,7 +16,7 @@ layout: lesson
 | 14:00  | [Programmatically retrieve statistics](./workshop-stats.html)                  | 0:55                |
 | 14:50  | Ten minute break and Q&A                                                       | 0:10                |
 | 15:00  | [The API and custom web interfaces](./workshop-custom-interface.html)          | 0:45                |
-| 15:45  | [Participant time to create one or more scripts](./free-code.html)             | 1:15                |
+| 15:45  | [Participant time to finish one or more scripts](./workshop-free-code.html)    | 1:15                |
 | 17:00  | End                                                                            | 0:00                |
 
 
