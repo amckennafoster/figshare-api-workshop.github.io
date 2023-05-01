@@ -4,10 +4,13 @@ layout: lesson
 
 # Figshare API Workshop Schedule
 
+This workshop assumes no prior experience working with APIs or coding. However, any experience level will gain from the workshop. It is organized around a personal project. The project can be as simple as writing a script to upload metadata or as complex as beginning a plan to build a custom user interface for your repository. 
+
+
 | Start  |  Title                                                                         | Duration            |
 | :---   |    :----                                                                       |              :---:  |
-| 9:30   | [Introductions - Technology Check](./workshop-introduction.html)               | 0:25                |
-| 9:55   | [Figshare API basics](./workshop-api-basics.html)                              | 0:30                |
+| 9:30   | [Introductions - Technology Check](./workshop-introduction.html)               | 0:45                |
+| 9:55   | [Figshare API basics](./workshop-api-basics.html)                              | 0:10                |
 | 10:25  | Five minute break                                                              | 0:05                |
 | 10:30  | [Programmatically retrieve metadata](./workshop-retrieve.html)                 | 0:50                |
 | 11:20  | Ten minute break                                                               | 0:10                |
