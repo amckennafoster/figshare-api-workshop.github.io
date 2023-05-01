@@ -13,14 +13,15 @@ layout: default
 - [Stats API endpoints](./stats-endpoints.html)
 
 ## Example Metadata Workflows
-- [Gather records from a specific group and output a list of item ids](./another-page.html)
-- [Gather records for one account and output a list of item ids](./another-page.html)
-- [Gather all metadata for a list of item ids and output both a json and CSV file](./another-page.html)
-- [Gather views and downloads for a list of items and output a CSV](./another-page.html)
+- [Gather records for one account and output basic record information](./another-page.html)
+- [Gather all metadata for a list of item ids and output to both a json and CSV file](./another-page.html)
+- [Upload metadata and files and then publish the record](./batch-upload-from-source.html)
 - [Batch format and upload metadata from a datasource](./batch-upload-from-source.html)
 
 ## Examples For Statistics Reporting
  - To be added
+ - [Download metadata for use in Google Data Studio]
+ - [Gather views and downloads for a list of items and output a CSV](./another-page.html)
 
 ## Examples For Custom Web Interfaces
  - To be added
