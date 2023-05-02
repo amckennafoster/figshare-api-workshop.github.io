@@ -153,7 +153,8 @@ df.head(3)
 ```
 
 Output:
-||item_ids |total_views |total_downloads |
+
+|item_ids |total_views |total_downloads |
 |----|--------:|--------:|--------:|
 |0|13259588|243|54|
 |1|1138718|7552|3030|
