@@ -190,4 +190,4 @@ for k in file_info:
 print('All done.')
 ```
 Output: The download script will save files to folders named for the item id the files belong to
-![picture of a folder window with two folders of downloaded files](download-folders.jpg)
+![picture of a folder window with two folders of downloaded files](../assets/download-folders.jpg)
