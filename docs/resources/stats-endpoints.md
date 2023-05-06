@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: resource
 ---
 
 # Statistics Endpoints
