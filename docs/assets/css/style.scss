@@ -15,3 +15,14 @@
     margin-bottom: 1rem;
     max-height: 200px;
 }
+
+.float-container {
+    margin: auto;
+    width: 50%;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}  
