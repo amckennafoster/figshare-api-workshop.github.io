@@ -1,5 +1,5 @@
 ---
-layout: lesson
+layout: resource
 ---
 
 # Chain api calls to retrieve information
