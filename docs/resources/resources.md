@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: resource
 ---
 
 # Figshare API Resources
