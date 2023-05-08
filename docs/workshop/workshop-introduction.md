@@ -11,6 +11,15 @@ layout: workshop-lesson
 - What would you like to get out of the workshop?
 - What is your experience with coding and APIs?
  
+## Workshop Overview
+
+Because participants may have different skill levels, we want you to go through this workshop with a specific use case that you'd like to apply your knowledge to.  Write down one or two ways you would like to use the Figshare API. Here are some starter ideas:
+- Download metadata from my account or my repository for reporting or analysis purposes
+- Upload harvested metadata in batch
+- Download metadata and associated reuse metrics for reporting purposes
+- Upload metadata and files through the API as part of an automated process
+- Build the initial components to complete a custom web interface.
+
 ## Technology Check
 
 ### Software
@@ -24,11 +33,4 @@ If you are at an institution that uses Figshare, it may be beneficial to use you
 
 ![Image of the Global University Sandbox](../assets/global-univ-sandbox.jpg)
 
-## Workshop Overview
 
-Because participants may have different levels of skills, we want you to go through this workshop with a specif use case that you'd like to apply your knowledge to.  Write down one or two ways you would like to use the Figshare API. Here are some starter ideas:
-- Download metadata from my account or my repository for reporting or analysis purposes
-- Upload harvested metadata in batch
-- Download metadata and associated reuse metrics for reporting purposes
-- Upload metadata and files through the API as part of an automated process
-- Build the initial components to complete a custom web interface.
