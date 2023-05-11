@@ -5,7 +5,7 @@ layout: workshop-lesson
 # API Basics
 
 ## Resources
-- The [Figshare API Documentation](https://docs.figshare.com) provides information on all of the API endpoints. The [resource section](../resources.html) of this site describes how to use the documentation site and provides examples.
+- The [Figshare API Documentation](https://docs.figshare.com) provides information on all of the API endpoints. The [resource section](../resources/resources.html) of this site describes how to use the documentation site and provides examples.
 - The [Figshare help site](https://help.figshare.com) offers additional information, including [how to get an API token](https://help.figshare.com/article/how-to-get-a-personal-token).
 
 ## The Figshare API
