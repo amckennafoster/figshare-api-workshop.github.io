@@ -24,9 +24,17 @@ Because participants may have different skill levels, we want you to go through 
 
 ### Software
 
-The examples in this workshop are mostly in Python. Examples using other languages are available from the [API documentation page](htttps://docs.figshare.com). There are two ways to use the example scripts:
-1. Have Python downloaded to your machine (and Jupyter Notebook is useful for testing and adding notes).
-2. Have a Google account and use Google Colab.
+The Figshare API can be used with any scripting language that can interact with APIs. The [documentation site](https://docs.figshare.com) offers sample code for several different languages. To use those examples you must use the Swagger client.
+
+The examples in this workshop primarily use [Postman](https://www.postman.com/) or [Jupyter Notebook](https://jupyter.org/) with Python. Example scripts using other languages are available from the [API documentation page](htttps://docs.figshare.com). 
+
+**Postman**
+To use Postman, you will need to download it to your computer. Postman will create properly formatted API calls for you and can be used to chain API calls.
+
+**Jupyter Notebook and Python**
+Jupyter Notebook with Python provides the possibility of creating custom scripts that accomplish multiple tasks all at once. There are two ways to use the example Python scripts:
+1. Have Jupyter Notebook and Python downloaded to your computer.
+2. Have a Google account and use Google Colab. (some scripts may not be set up for this without additional work)
 
 ### Sandbox Instance
 If you are at an institution that uses Figshare, it may be beneficial to use your institution's sandbox. If that is not available or your institution does not use Figshare, we will provide access to our Global University sandbox. You can also use a free Figshare account for many of the examples.

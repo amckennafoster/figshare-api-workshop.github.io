@@ -26,7 +26,7 @@ There are three panes on the documentation site
  - If the endpoint accepts data you will see a "Body Sample" and a "Body Schema"
  - If the endpoint provides data you will see a "Response Sample" and a "Response Schema"
 
-![image of figshare api documentation with annotations for the three sections](assets/api-docs.jpg)
+![image of figshare api documentation with annotations for the three sections](../assets/api-docs.jpg)
 
 ## Interacting with the API user interface 
 
@@ -41,7 +41,7 @@ While you can download the citation metadata directly from the user interface, t
 
 You can view this same output in its own browser tab by visiting the API endpoint with the item id appended to it: [https://api.figshare.com/v2/articles/5616445](https://api.figshare.com/v2/articles/5616445)
 
-![image of figshare api documentation showing how to retrieve all the metadata for item 5616445](assets/api-article-details.jpg)
+![image of figshare api documentation showing how to retrieve all the metadata for item 5616445](../assets/api-article-details.jpg)
 
 ### Perform a metadata search
 
@@ -57,16 +57,16 @@ Figshare search will search all metadata fields by default. You can limit to dat
 }
 ```
 
-![image of figshare api documentation showing how to search for records](assets/api-search.jpg)
+![image of figshare api documentation showing how to search for records](../assets/api-search.jpg)
 
 ### Authenticate and retrieve metadata from your account
 
 To retrieve or send information that is not public, you will need to [create a token from your account](https://help.figshare.com/article/how-to-get-a-personal-token) and paste that into the API user interface. Once you've done that, visit this endpoint: [https://docs.figshare.com/#private_articles_list](https://docs.figshare.com/#private_articles_list). Paste the token into the upper left field in the API user interface and hit the 'TRY' button. You should see the basic metadata for the private and public items in your account.
 
-![image of figshare api documentation showing how to enter a token and get your own item metadata](assets/api-get-own-items.jpg)
+![image of figshare api documentation showing how to enter a token and get your own item metadata](../assets/api-get-own-items.jpg)
 
 ### Administrators: See groups you administer
 If you create a token from an administrator account, you will be able to use the endpoints under the 'Institutions' heading in the API user interface. After pasting your token in the upper left field, click on the 'Institutions' heading in the left pane and click on 'Private account institution groups'. Click the 'TRY' button and you'll see information for the groups your account is an administrator for.
 
-![image of figshare api documentation showing how to enter a token and get your own item metadata](assets/api-get-groups.jpg)
+![image of figshare api documentation showing how to enter a token and get your own item metadata](../assets/api-get-groups.jpg)
 

@@ -14,6 +14,6 @@ The Figshare API provides programmatic access to the repository system and the m
 
 Working with the API requires using JSON formatted inputs and outputs.
 
-For a simplified version of Figshare fields, you can use [this help page](). **LINK NEEDED**
+For a simplified version of Figshare fields, you can use [this help page](https://help.figshare.com/article/figshare-metadata-schema-overview).
 
 ![image showing what can be accessed through the user interface versus the API](../assets/figshare.jpg)
