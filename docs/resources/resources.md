@@ -10,7 +10,7 @@ layout: resource
 - [API methods](./api-methods.html)
 - [Chaining API calls](./chain-api-calls.html)
 - [Formatting JSON inputs and outputs](./formatting.html)
-- [Stats API endpoints](./stats-endpoints.html)
+- [Stats API endpoints](./statistics-reporting.html)
 
 ## Example Metadata Workflows
 - [Gather records for one account and output basic record information](./another-page.html)
@@ -19,7 +19,7 @@ layout: resource
 - [Batch format and upload metadata from a datasource](./batch-upload-from-source.html)
 
 ## Examples For Statistics Reporting
- - To be added
+ - to do
  - [Download metadata for use in Google Data Studio]
  - [Gather views and downloads for a list of items and output a CSV](./another-page.html)
 
