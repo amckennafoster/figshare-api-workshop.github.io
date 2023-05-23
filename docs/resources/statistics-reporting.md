@@ -47,8 +47,8 @@ text_file = open("team-token.txt", "r")
 auth = text_file.read()
 auth.strip() #removes any hidden spaces
 text_file.close()
-"#Set the base URL and Institution name
-"BASE_URL = 'https://stats.figshare.com'
+#Set the base URL and Institution name
+BASE_URL = 'https://stats.figshare.com'
 INST = 'ENTER repository URL base here' #Example: 'team' for https://team.figshare.com
 
 #Encode the credentials and create the header
