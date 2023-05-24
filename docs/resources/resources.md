@@ -13,9 +13,8 @@ layout: resource
 - [Stats API endpoints](./statistics-reporting.html)
 
 ## Example Metadata Workflows
-- [Gather records for one account and output basic record information](./another-page.html)
-- [Gather all metadata for a list of item ids and output to both a json and CSV file](./another-page.html)
-- [Upload metadata and files and then publish the record](./batch-upload-from-source.html)
+- [Gather records for one account and output basic record information](./author-report.html)
+- [Upload metadata and files and then publish the record](./create-upload-publish.html)
 - [Batch format and upload metadata from a datasource](./batch-upload-from-source.html)
 
 ## Examples For Statistics Reporting
