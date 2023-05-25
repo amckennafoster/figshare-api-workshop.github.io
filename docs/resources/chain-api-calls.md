@@ -78,8 +78,9 @@ results = [] #create a blank list
 query = '{"institution": ' + str(INST_ID) + ',"group": ' + str(GRP_ID) + '}'
 y = json.loads(query) #Figshare API requires json paramaters
 
-#The number of results is unknown but you can collect up to 9,000 results. This sets the page size to 1000 results and calls the API 
-#to retrieve 9 pages of results
+#You can collect up to 9,000 results. This sets the page size to 1000 results and calls the API 
+#to retrieve 9 pages of results. You can use this endpoint to get the number of items in 
+#a group: https://docs.figshare.com/#stats_count_articles
 for j in range(1,10):
     records = json.loads(requests.post(BASE_URL + '/articles/search?page_size=1000&page={}'.format(j), params=y).content)
     results.extend(records) #add the retrieved records to the list of records

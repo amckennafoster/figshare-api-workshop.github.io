@@ -4,9 +4,6 @@ layout: resource
 
 # Formatting JSON
 
-1. Some basic advice (using quotes and json.loads)
-2. json validation against the schema??????? https://www.newtonsoft.com/json/help/html/JsonSchema.htm#:~:text=The%20simplest%20way%20to%20check,method%20with%20the%20JSON%20Schema.&text=To%20get%20validation%20error%20messages,%2C%20JsonSchema%2C%20ValidationEventHandler)%20overloads.
-
 Format authors as part of creating a new item. 
 ```py
 import json
@@ -25,6 +22,52 @@ Format a partial date for use in Figshare (partial date support is on the roadma
 #assume you have created a dictionary called my_dict that holds the Figshare formatted metadata and the harvested metadata only includes a year. This makes the date January 1 of that year.
 
 my_dict['timeline'] =  {"firstOnline" : str(item['year']) + "-01-01"} #year only
+```
+
+Here is an example of formatting existing json metadata for upload to Figshare:
+```py
+existing_metadata = [
+    {"record_id":123,
+     "title":"blah blah blah",
+     "authors": [{"first_name":"Allisa", "last_name":"Morris"},{"first_name":"Alex", "last_name":"Dannold"}],
+     "doi":"https://doi.org/10.38743/384738"
+    },
+    {"record_id":456,
+     "title":"yadda yadda",
+     "authors": [{"first_name":"Andrew", "last_name":"Yol"},{"first_name":"Rebecca", "last_name":"Jane"}],
+     "doi":"https://doi.org/10.29033/6575"}
+]
+
+formatted_metadata = []
+for record in existing_metadata:
+    record_dict = {}
+    record_dict['id'] = record['record_id']
+    record_dict['title'] = record['title']
+    #Format authors
+    authors = []
+    for name in record['authors']:
+        authorname = {"name" : name['first_name'] + " " + name['last_name']}
+        authors.append(authorname)
+    record_dict['authors'] = authors
+    #Format doi to just the doi vaalue and not URL
+    doi = str(record['doi'])[16:]
+    record_dict['doi'] = doi
+    #Add record to the growing list
+    formatted_metadata.append(record_dict)
+    
+#See formatted metadata:
+formatted_metadata
+```
+Output:
+```json
+[{'id': 123,
+  'title': 'blah blah blah',
+  'authors': [{'name': 'Allisa Morris'}, {'name': 'Alex Dannold'}],
+  'doi': '10.38743/384738'},
+ {'id': 456,
+  'title': 'yadda yadda',
+  'authors': [{'name': 'Andrew Yol'}, {'name': 'Rebecca Jane'}],
+  'doi': '10.29033/6575'}]
 ```
 
 If you downloaded metadata and want to format the dates in a dataframe:
