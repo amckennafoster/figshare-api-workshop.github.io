@@ -60,7 +60,7 @@ for record in existing_metadata:
 formatted_metadata
 ```
 Output:
-```json
+```
 [{'id': 123,
   'title': 'blah blah blah',
   'authors': [{'name': 'Allisa Morris'}, {'name': 'Alex Dannold'}],
