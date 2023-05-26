@@ -13,6 +13,7 @@ This workshop assumes no prior experience working with APIs or coding. However, 
 | 10:05  | [Introduction to HTTP requests](./workshop/http-requests.html)                | 0:45                |
 | 10:50  | Ten minute break                                                              | 0:10                |
 | 11:00  | [Introduction to the Figshare API](./workshop/workshop-api-basics.html)        | 1:00                |
+| 12:00  | Q&A - Free work time														      | 0:30            |
 | 12:30  | Lunch                                                                          | 1:30                |
 | 14:00  | [Postman: Retrieve, Send, Upload](./workshop/postman-use-api.html)         | 0:55       |
 | 14:55  | 5 minute break                                                                 | 0:05                |

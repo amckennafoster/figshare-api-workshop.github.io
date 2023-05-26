@@ -11,11 +11,11 @@ layout: workshop-lesson
 ## Performing requests with Postman
 - Retrieve item metadata
 - Create item
- - Uploading files
+    - Uploading files
 - Retrieving stats
 - Retrieving repository accounts
 - Creating a new account
- - Note on HR feeds
-Generating code for requests
-Chaining requests
+    - Note on HR feeds
+- Generating code for requests
+- Chaining requests
 
