@@ -9,19 +9,16 @@ This workshop assumes no prior experience working with APIs or coding. However, 
 
 | Start  |  Title                                                                         | Duration            |
 | :---   |    :----                                                                       |              :---:  |
-| 9:30   | [Introductions - Technology Check](./workshop/workshop-introduction.html)      | 0:45                |
-| 9:55   | [Figshare API basics](./workshop/workshop-api-basics.html)                     | 0:10                |
-| 10:25  | Five minute break                                                              | 0:05                |
-| 10:30  | [Programmatically retrieve metadata](./workshop/workshop-retrieve.html)        | 0:50                |
-| 11:20  | Ten minute break                                                               | 0:10                |
-| 11:30  | [Programmatically creating or managing records](./workshop/workshop-create-manage.html) | 0:55       |
+| 9:30   | [Introductions - Technology Check](./workshop/workshop-introduction.html)      | 0:35                |
+| 10:05  | [Introduction to HTTP requests](./workshop/http-requests.html)                | 0:45                |
+| 10:50  | Ten minute break                                                              | 0:10                |
+| 11:00  | [Introduction to the Figshare API](./workshop/workshop-api-basics.html)        | 1:00                |
 | 12:30  | Lunch                                                                          | 1:30                |
-| 14:00  | [Programmatically retrieve statistics](./workshop/workshop-stats.html)         | 0:55                |
-| 14:50  | Ten minute break and Q&A                                                       | 0:10                |
-| 15:00  | [The API and custom web interfaces](./workshop/workshop-custom-interface.html) | 0:45                |
-| 15:45  | [Participant time to finish one or more scripts](./workshop/workshop-free-code.html)    | 1:15       |
+| 14:00  | [Postman: Retrieve, Send, Upload](./workshop/postman-use-api.html)         | 0:55       |
+| 14:55  | 5 minute break                                                                 | 0:05                |
+| 15:00  | [Write an application that uses the Figshare API](./workshop/workshop-custom-app.html)         | 1:30   |
+| 16:30  | Q&A - Free work time			                                                  | 0:30                |
 | 17:00  | End                                                                            | 0:00                |
 
-# Figshare API Resources
 
-Visit the [resource pages](./resources/resources.html) for helpful links as well as script and workflow examples.
+Here is a link to a copy of the <a href="https://google.com" target="_blank">slides used in the workshop</a>.
