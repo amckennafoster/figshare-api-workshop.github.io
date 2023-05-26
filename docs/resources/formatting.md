@@ -4,6 +4,7 @@ layout: resource
 
 # Formatting JSON
 
+## Formatting json to send
 Format authors as part of creating a new item. 
 ```py
 import json
@@ -69,6 +70,8 @@ Output:
   'authors': [{'name': 'Andrew Yol'}, {'name': 'Rebecca Jane'}],
   'doi': '10.29033/6575'}]
 ```
+
+## Formatting downloaded json
 
 If you downloaded metadata and want to format the dates in a dataframe:
 ```py

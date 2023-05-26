@@ -155,7 +155,7 @@ df.head(3)
 
 Output:
 
-|item_ids |total_views |total_downloads |
+|item_id |total_views |total_downloads |
 |----|--------:|--------:|--------:|
 |13259588|243|54|
 |1138718|7552|3030|

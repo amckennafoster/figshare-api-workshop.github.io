@@ -10,12 +10,11 @@ This pages offers an example of creating lnked file records based on harvested m
 Here are the steps to format metadata harvested from the Dimensions database and create linked file records:
 
 1. Open a json file
-2. Pull out the relevant fields and give them the proper keys (account for partial dates, author formatting,and missing abstracts)
-3. Interate through and upload the records 
-4. Convert the json record to a string with double quotes
-5. Upload the record
-6. Update the author list of the new record (removes the admin account as an author)
-7. Add the existing DOI as a linked file
+2. Pull out the relevant fields and give them the proper keys (account for partial dates, author formatting, and missing abstracts)
+3. Convert the json record to a string with double quotes
+4. Upload the record
+5. Update the author list of the new record (removes the admin account as an author)
+6. Add the existing DOI as a linked file
 
 This can upload to a specific group with specific custom metadata. You can change the api key to upload to different accounts or use impersonation.
 

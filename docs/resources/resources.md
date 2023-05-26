@@ -9,8 +9,13 @@ layout: resource
 - [Understanding the API documentation](./understanding-api-documentation.html)
 - [API methods](./api-methods.html)
 - [Chaining API calls](./chain-api-calls.html)
-- [Formatting JSON inputs and outputs](./formatting.html)
 - [Stats API endpoints](./statistics-endpoints.html)
+
+## Advice and Guidance
+
+- [Formatting JSON inputs and outputs](./formatting.html)
+- [Impersonating](./impersonating.html)
+
 
 ## Example Metadata Workflows
 - [Gather records for one author and output basic record information](./author-report.html)
