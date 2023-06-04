@@ -25,6 +25,3 @@ layout: resource
 ## Examples For Statistics Reporting
   - [Gather records for one author and output basic record information](./author-report.html)
  - [General reporting information](./statistics-reporting.html)
-
-## Examples For Custom Web Interfaces
- - To be added
