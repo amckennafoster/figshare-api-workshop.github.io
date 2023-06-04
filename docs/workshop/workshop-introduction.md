@@ -11,12 +11,9 @@ Adrian-Tudor Pănescu PhD - Iasi, Romania
 
 Andrew Mckenna-Foster MLIS MSc - Oregon, USA
 
-Maria Cotera - London, UK
-
 ### Group Introductions
 - What brought you to this workshop?
-- What would you like to get out of the workshop?
-- What is your experience with coding and APIs?
+- What do you want to get out of the workshop?
  
 ## Workshop Overview
 
