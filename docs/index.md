@@ -16,7 +16,7 @@ This workshop assumes no prior experience working with APIs or coding. However, 
 | 12:15  | Q&A - Project time														                                  | 0:45            |
 | 13:00  | Lunch                                                                          | 1:00                |
 | 14:00  | [Postman: Retrieve, Send, Upload](./workshop/postman-use-api.html)            | 1:15       |
-| 15:15  | Tea break - 30 minutes                                                          | 0:05                |
+| 15:15  | Tea break - 30 minutes                                                          | 0:30                |
 | 15:45  | [Write an application that uses the Figshare API](./workshop/workshop-custom-app.html)         | 0:45   |
 | 16:30  | Q&A - Free work time			                                                  | 0:30                |
 | 17:00  | End                                                                            | 0:00                |
