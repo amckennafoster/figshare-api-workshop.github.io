@@ -21,5 +21,6 @@ This workshop assumes no prior experience working with APIs or coding. However, 
 | 16:30  | Q&A - Free work time			                                                  | 0:30                |
 | 17:00  | End                                                                            | 0:00                |
 
-
 Here is a link to a copy of the <a href="https://google.com" target="_blank">slides used in the workshop</a>.
+
+Here are instructions on how to use your institutions stage repository and the workshop [sandbox repository](/workshop/sandbox-instructions.html).
