@@ -37,6 +37,8 @@ If you are at an institution that uses Figshare, it may be beneficial to use you
 
 ![Image of the Global University Sandbox](../assets/global-univ-sandbox.jpg)
 
+Please see the [sandbox instructions](./sandbox-instructions.html) for login information and guidance on creating an API token.
+
 ### Other Resources
 There are general descriptions and resources [available here](../resources/resources.html). The examples in those pages use Python.
 
