@@ -12,7 +12,7 @@ Then add a request
 
 ![postman example image - add request](../assets/postman-create-request.jpg)
 
-You can add a token under 'Authorization'
+You can add a token under 'Authorization'. Note that you need to put 'token' in the Header Prefix field below the token field.
 
 ![postman example image - add token](../assets/postman-add-token.jpg)
 
@@ -20,11 +20,11 @@ Even better, save your token as a variable...
 
 ![postman example image - save token as variable](../assets/postman-create-variable-for-token.jpg)
 
-Then use that token under Authorization by putting double curly brackets around the variable name ({{variable name}}).
+Then use that token under Authorization by putting double curly brackets around the variable name.
 
 ![postman example image - set up environment](../assets/postman-add-token-as-variable.jpg)
 
-Change the request from Get to POST or PUT to match what the API endpoint. You can add information to the body area. This example uses POST with this endpoint: https://docs.figsh.com/#private_article_create
+Change the request from GET to POST or PUT to match what the API endpoint. You can add information to the body area. This example uses POST with this endpoint: https://docs.figsh.com/#private_article_create
 The body contains JSON formatted metadata and the endpoint returns the item id as the 'entity_id' and the api URL for the item as 'location'
 
-![postman example image - POST metadata to create item(../assets/postman-POST-send-body.jpg)
+![postman example image - POST metadata to create item](../assets/postman-POST-send-body.jpg)
