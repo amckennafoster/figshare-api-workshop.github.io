@@ -29,7 +29,7 @@ Click the profile icon at the top right and select Applications from the dropdow
 
 ![Image of the Global University Sandbox](../assets/global-applications.jpg)
 
- Scroll to the bottom of the Applications screen and click the 'Create Personal Toekn' button. Put your name for the description- we will delete all these tokens after the workshop. Then copy the resulting string to a text document on your computer. 
+ Scroll to the bottom of the Applications screen and click the 'Create Personal Token' button. Put your name for the description- we will delete all these tokens after the workshop. **Then copy the resulting string to a text document on your computer**. You'll need it later. 
  
  ![Image of the Global University Sandbox](../assets/global-token.jpg)
 
