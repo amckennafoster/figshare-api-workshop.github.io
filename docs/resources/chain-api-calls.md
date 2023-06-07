@@ -95,7 +95,7 @@ item_ids = [item['id'] for item in results]
 ## Now gather information for those item ids
 
 ### Full metadata
-Use one of the methods above to create a list of item ids called item_ids. This API call includes a token in the header in case some of the item ids are for unpublished records
+Use one of the methods above to create a list of item ids called item_ids. This API call includes a token in the header in case some of the item ids are for unpublished records.
 
 ```py
 import json
