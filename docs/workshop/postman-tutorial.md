@@ -24,7 +24,7 @@ Then use that token under Authorization by putting double curly brackets around 
 
 ![postman example image - set up environment](../assets/postman-add-token-as-variable.jpg)
 
-Change the request from GET to POST or PUT to match what the API endpoint. You can add information to the body area. This example uses POST with this endpoint: https://docs.figsh.com/#private_article_create
+Change the request from GET to POST or PUT to match what the API endpoint requires. You can add information to the body area. This example uses POST with this endpoint: https://docs.figsh.com/#private_article_create
 The body contains JSON formatted metadata and the endpoint returns the item id as the 'entity_id' and the api URL for the item as 'location'
 
 ![postman example image - POST metadata to create item](../assets/postman-POST-send-body.jpg)

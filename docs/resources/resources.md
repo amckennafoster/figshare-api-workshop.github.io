@@ -8,7 +8,7 @@ layout: resource
 
 - [Understanding the API documentation](./understanding-api-documentation.html)
 - [API methods](./api-methods.html)
-- [Chaining API calls](./chain-api-calls.html)
+- [Chaining API requests](./chain-api-requests.html)
 - [Stats API endpoints](./statistics-endpoints.html)
 
 ## Advice and Guidance

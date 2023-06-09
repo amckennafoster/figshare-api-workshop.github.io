@@ -23,5 +23,5 @@ Here are [some basic instructions](./postman-tutorial.html) for you to refer to 
 - Creating a new account
     - Note on HR feeds
 - Generating code for requests
-- Chaining requests
+- Chaining requests ([examples](../resources/chain-api-requests.html))
 
