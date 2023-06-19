@@ -33,4 +33,6 @@ See below for more advanced resources
   - [Gather records for one author and output basic record information](./resources/author-report.html)
  - [General reporting information](./resources/statistics-reporting.html)
 
-## More Advanced Resources
+## More Advanced Resources - Custom Web Apps and User Interfaces
+
+You can create custom interfaces to display information from your Figshare account or repository. Online tools, like ChatGPT, can help. This was demonstrated in the API workshop Figshare ran at the 2023 Open Repositories Conference. You can see the resources for this demonstration on the [workshop page](../workshop/workshop-custom-app.html) and [the workshop slides]((../assets/Figshare-API-Workshop-Open-Repositories-2023.pdf).
