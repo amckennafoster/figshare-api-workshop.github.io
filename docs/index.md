@@ -35,4 +35,4 @@ See below for more advanced resources
 
 ## More Advanced Resources - Custom Web Apps and User Interfaces
 
-You can create custom interfaces to display information from your Figshare account or repository. Online tools, like ChatGPT, can help. This was demonstrated in the API workshop Figshare ran at the 2023 Open Repositories Conference. You can see the resources for this demonstration on the [workshop page](../workshop/workshop-custom-app.html) and [the workshop slides]((../assets/Figshare-API-Workshop-Open-Repositories-2023.pdf).
+You can create custom interfaces to display information from your Figshare account or repository. Online tools, like ChatGPT, can help. This was demonstrated in the API workshop Figshare ran at the 2023 Open Repositories Conference. You can see the resources for this demonstration on the [workshop page](./workshop/workshop-custom-app.html) and [the workshop slides](../assets/Figshare-API-Workshop-Open-Repositories-2023.pdf).

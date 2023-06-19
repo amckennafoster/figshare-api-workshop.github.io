@@ -7,10 +7,10 @@ layout: workshop-lesson
 This was demonstrated during the workshop. ChatGPT was used to show how a non-expert can build their own custom web app. Both the workshop example and a complete example are available:
 - Workshop demonstration files that set up a Python server and a basic HTML page to show titles from a Figshare sandbox environment:
     - [workshop chatGPT prompts and responses](../assets/chatGPT-web-app-workshop-example.pdf)
-	- [Wokshop example zipped file with Python code and HTML page](../assets/workshop.zip)
+	- [Wokshop example zipped file with Python code and HTML page](../assets/workshop.zip)(downloads a zip file)
 - Similar to above, but this complete example shows titles and views for records from the sandbox:
     - [Complete chatGPT prompts and responses](../assets/chatGPT-web-app-complete-example.pdf)
-	- [Complete example zipped file with Python code and HTML page](../assets/complete.zip)
+	- [Complete example zipped file with Python code and HTML page](../assets/complete.zip)(downloads a zip file)
 
 ## Development environment and tools
 
@@ -37,10 +37,8 @@ See the pdf examples above for how to refine the prompts.
 - Generate a HTML file with a React app that displays the results of a HTTP call
 - Generate Python code for a Flask GET route that has a query parameter and returns JSON
 
-## Useful documentation:
+## Other useful documentation:
 - <a href="https://developer.mozilla.org/en-US/" target="_blank">https://developer.mozilla.org/en-US/</a>
-- <a href="hhttps://flask.palletsprojects.com/en/2.3.x/" target="_blank">https://flask.palletsprojects.com/en/2.3.x/</a>
-- <a href="https://react.dev/ " target="_blank">https://react.dev/ </a>
 
 ## Security considerations:
 - CORS: Abbreviation for cross-origin resource sharing
