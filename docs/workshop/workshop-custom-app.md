@@ -4,9 +4,9 @@ layout: workshop-lesson
 
 # Creating a custom Web App using the Figshare API
 
-This was demonstrated during the workshop. ChatGPT was used to show how a non-expert can build their own custom web app. Both the workshop example and a complete example are available:
+This was demonstrated during the workshop. ChatGPT was used to show how a non-expert can build their own custom web app. Both the workshop example and a complete example are available and require Python installed on your machine. Run the Python script and point your browser to [http://localhost:5000](http://localhost:5000).
 - Workshop demonstration files that set up a Python server and a basic HTML page to show titles from a Figshare sandbox environment:
-    - [workshop chatGPT prompts and responses](../assets/chatGPT-web-app-workshop-example.pdf)
+    - [Workshop chatGPT prompts and responses](../assets/chatGPT-web-app-workshop-example.pdf)
 	- [Wokshop example zipped file with Python code and HTML page](../assets/workshop.zip)(downloads a zip file)
 - Similar to above, but this complete example shows titles and views for records from the sandbox:
     - [Complete chatGPT prompts and responses](../assets/chatGPT-web-app-complete-example.pdf)
