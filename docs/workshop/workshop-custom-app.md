@@ -7,10 +7,10 @@ layout: workshop-lesson
 This was demonstrated during the workshop. ChatGPT was used to show how a non-expert can build their own custom web app. Both the workshop example and a complete example are available and require Python installed on your machine. Run the Python script and point your browser to [http://localhost:5000](http://localhost:5000).
 - Workshop demonstration files that set up a Python server and a basic HTML page to show titles from a Figshare sandbox environment:
     - [Workshop chatGPT prompts and responses](../assets/chatGPT-web-app-workshop-example.pdf)
-	- [Wokshop example zipped file with Python code and HTML page](../assets/workshop.zip)(downloads a zip file)
+	- [Wokshop example zipped file with Python code and HTML page](../assets/workshop.zip) (downloads a zip file)
 - Similar to above, but this complete example shows titles and views for records from the sandbox:
     - [Complete chatGPT prompts and responses](../assets/chatGPT-web-app-complete-example.pdf)
-	- [Complete example zipped file with Python code and HTML page](../assets/complete.zip)(downloads a zip file)
+	- [Complete example zipped file with Python code and HTML page](../assets/complete.zip) (downloads a zip file)
 
 ## Development environment and tools
 

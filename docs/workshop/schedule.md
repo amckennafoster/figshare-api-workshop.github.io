@@ -4,7 +4,7 @@ layout: workshop-lesson
 
 # Figshare API Workshop Schedule
 
-This is the schedule used for an API workshop at the Open Repositories COnference 2023 held in Stellenbosch, South Africa. The workshop assumes no prior experience working with APIs or coding. Please feel free to reuse these resources within your own institution.
+This is the schedule used for an API workshop at the Open Repositories Conference 2023 held in Stellenbosch, South Africa. The workshop assumes no prior experience working with APIs or coding. Please feel free to reuse these resources within your own institution.
 
 
 | Start  |  Title                                                                         | Duration            |
@@ -24,5 +24,3 @@ This is the schedule used for an API workshop at the Open Repositories COnferenc
 Here is a link to a copy of the [slides used in the workshop](../assets/Figshare-API-Workshop-Open-Repositories-2023.pdf).
 
 Here are instructions on how to use your institution's stage repository and the workshop [sandbox repository](./sandbox-instructions.html).
-
-And [here are other resources and examples](../index.html) that use Python.
