@@ -28,6 +28,7 @@ See below for more advanced resources
 - [Gather records for one author and output basic record information](./resources/author-report.html)
 - [Upload metadata and files and then publish the record](./resources/create-upload-publish.html)
 - [Batch format and upload metadata from a datasource](./resources/batch-upload-from-source.html)
+- [Retrieve metadata for items in review](./resources/get-review-items.html)
 - A variety of other scripts can be [found here](https://github.com/amckennafoster/figshare-api-scripts) and [this help page](https://help.figshare.com/article/how-to-use-the-figshare-api) links to Google Colab versions of some of those scripts
 - There are many other [GitHub repos](https://github.com/search?q=figshare&type=repositories) for Figshare related workflows or integrations
 
