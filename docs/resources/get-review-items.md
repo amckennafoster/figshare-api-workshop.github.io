@@ -21,7 +21,7 @@ You may want to bulk publish a group of items but avoid having to review them al
 2. Delete all the items (rows) that you don't want to publish
 3. Delete all columns except 'id'
 4. Rename the 'id' column to 'article_id' and save the file
-5. You should now have a CSV with only once column of numbers titled 'article_id'
+5. You should now have a CSV with only one column of numbers titled 'article_id'
 6. Log in to an administrator Figshare account that has review privileges. 
 7. Navigate to the [Batch Management](https://help.figshare.com/article/administrative-batch-management) tool and select your CSV as the source file. Select the option to automatically review items.
 
