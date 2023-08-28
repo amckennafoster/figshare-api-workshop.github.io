@@ -43,7 +43,8 @@ This example searches for records with that use the category 'Digital Humanities
 ```py
 import json
 import requests
-categories = ["'Digital Humanities'","'Environmental Humanities'"]
+BASE_URL = 'https://api.figshare.com/v2'
+categories = ["'History and Philosophy of the Humanities'","'Environmental Humanities'"]
 #Gather basic metadata for items (articles) that meet your search criteria
 results = [] #create a blank list
 for i in categories:
@@ -58,10 +59,11 @@ for i in categories:
 print(len(results),'items retrieved')
 
 #Create a list of all the item ids
-item_ids = [item['id'] for item in results]  
+item_ids_full = [item['id'] for item in results]  
+
 #Remove duplicates by converting to a dictionary and back to a list
-item_ids_unique = list( dict.fromkeys(item_ids) ) 
-print(len(item_ids)-len(item_ids_unique),'duplicate records removed,',len(item_ids_unique),'unique records remain')
+item_ids = list( dict.fromkeys(item_ids_full) ) 
+print(len(item_ids_full)-len(item_ids),'duplicate records removed,',len(item_ids),'unique records remain')
 ```
 
 ### Retrieve item ids in a group
@@ -95,15 +97,15 @@ item_ids = [item['id'] for item in results]
 ## Now gather information for those item ids
 
 ### Full metadata
-Use one of the methods above to create a list of item ids called item_ids. This API call includes a token in the header in case some of the item ids are for unpublished records.
+Use one of the methods above to create a list of item ids called item_ids. This script includes an option to add a token in the header in case some of the item ids are for unpublished records.
 
 ```py
 import json
 import requests
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
-#Set the token in the header
-api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
+#Set the token in the header  if you have some private items in your list
+#api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 
 #---INSERT CODE TO COLLECT ITEM IDS HERE----
 
@@ -128,9 +130,7 @@ import requests
 import pandas as pd 
 
 #Set the base URL
-BASE_URL = 'https://api.figshare.com/v2'
-#Set the token in the header
-api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
+BASE_URL = 'https://stats.figshare.com'
 
 #---INSERT CODE TO COLLECT ITEM IDS HERE----
 
@@ -138,9 +138,9 @@ stats = [] #This list will hold a dictionary for each item_id
 
 for i in item_ids:
     #make two api calls to retrieve total views and total downloads
-    r=requests.get('https://stats.figshare.com/total/views/article/'+ str(i))
+    r=requests.get(BASE_URL + '/total/views/article/'+ str(i))
     views=json.loads(r.text)
-    r=requests.get('https://stats.figshare.com/total/downloads/article/'+ str(i))
+    r=requests.get(BASE_URL + '/total/downloads/article/'+ str(i))
     downloads=json.loads(r.text)
     #Add the item_id, views, and downloads as a dictionary and add to the stats list.
     item_stats = {"item_id":i,"total_views":views['totals'],"total_downloads":downloads['totals']}

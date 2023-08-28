@@ -12,7 +12,7 @@ The stats endpoints in Figshare provide statistics for items, authors, collectio
 4. [Geolocation](https://docs.figshare.com/#stats_breakdown): Views, downloads, or shares by country and city and optionally filtered by a start_date and end_date.
 5. [Count items](https://docs.figshare.com/#stats_count_articles): Retrieve the number of items from one or more public groups.
 
-It is important to note that **the endpoints for timeline and geolocation require a separate password** instead of your administrator token when requesting results from within the institution scope (figshare.com items need no authentication). This is due to a legacy system. Request these credentials through a support request (support@figshare.com).
+It is important to note that **stats from the institution scope require a separate password** instead of your administrator token when requesting results from within the institution scope (figshare.com items need no authentication). This is due to a legacy system. Request these credentials through a support request (support@figshare.com).
 
 Here are a few examples using python:
 

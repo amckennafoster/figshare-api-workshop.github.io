@@ -43,7 +43,7 @@ https://stats.figshare.com/total/views/article/5616445
 ## API authentication
 - REST API - personal token: https://help.figshare.com/article/how-to-get-a-personal-token
 - OAuth2 - create applications which require users to log into their own Figshare account
-- Stats API - user/password, contact support@figshare.com for an account
+- Stats API - Views/downloads/shares for items/collections/projects no authentication needed. Within institution scope, separate username/password required, contact support@figshare.com to get credentials for your institution.
 
 Credentials are sent to the API server via the Authorization header. **Make sure credentials are stored in a secure location!**
 

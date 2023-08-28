@@ -95,9 +95,6 @@ df_dates = pd.json_normalize(
     temp_date_list 
 )
 
-#Replace blank cells with 'null'
-df_dates.replace(df_dates.replace(r'^\s*$', 'null', regex=True, inplace = True)) 
-
 #Merge the dataframes
 df_formatted = df.merge(df_dates, how='outer', on='id')
 
