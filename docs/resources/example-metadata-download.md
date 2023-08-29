@@ -13,7 +13,7 @@ Note: You need to have two sets of credentials:
 1. A repository administrator token
 2. The credentials for the stats API (ask Support if you do not have them yet)
 
-The [Jupyter Notebook](https://colab.research.google.com/drive/17GtCZHfRT6kDe_Rbrj9EkIpnxyO3iuRH?usp=sharing) is available and you can run it in Colab. Here are the high level steps in the process:
+The <a href="https://colab.research.google.com/drive/17GtCZHfRT6kDe_Rbrj9EkIpnxyO3iuRH?usp=sharing" target="_blank">Jupyter Notebook</a> is available and you can run it in Colab. Here are the high level steps in the process:
 1. Import libraries
 2. Set variables and metadata API credentials
 3. Retrieve all item ids and pull out only public item ids

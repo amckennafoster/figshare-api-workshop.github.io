@@ -102,12 +102,14 @@ Use one of the methods above to create a list of item ids called item_ids. This 
 ```py
 import json
 import requests
-#Set the base URL
-BASE_URL = 'https://api.figshare.com/v2'
+
 #Set the token in the header  if you have some private items in your list
 #api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 
 #---INSERT CODE TO COLLECT ITEM IDS HERE----
+
+#Set the base URL
+BASE_URL = 'https://api.figshare.com/v2'
 
 full_records = [] #Create a blank list to hold the JSON metadata records
 for id_value in item_ids: 
@@ -129,10 +131,10 @@ import json
 import requests
 import pandas as pd 
 
+#---INSERT CODE TO COLLECT ITEM IDS HERE----
+
 #Set the base URL
 BASE_URL = 'https://stats.figshare.com'
-
-#---INSERT CODE TO COLLECT ITEM IDS HERE----
 
 stats = [] #This list will hold a dictionary for each item_id
 
@@ -169,6 +171,8 @@ Python:
 import json
 import requests
 from pathlib import Path
+
+#---INSERT CODE TO COLLECT ITEM IDS HERE----
 
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'

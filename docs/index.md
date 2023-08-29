@@ -22,6 +22,7 @@ See below for more advanced resources
 
 - [Formatting JSON inputs and outputs](./resources/formatting.html)
 - [Impersonating](./resources/impersonating.html)
+- [General reporting information](./resources/statistics-reporting.html)
 
 
 ### Example Metadata Workflows
@@ -34,7 +35,8 @@ See below for more advanced resources
 
 ### Examples For Statistics Reporting
 - [Gather records for one author and output basic record information](./resources/author-report.html)
-- [General reporting information](./resources/statistics-reporting.html)
+- [Download metadata and stats for a custom repository dashboard](./resources/example-metadata-download.html)
+
 
 ## More Advanced Resources - Custom Web Apps and User Interfaces
 
