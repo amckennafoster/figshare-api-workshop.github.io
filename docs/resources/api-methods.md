@@ -4,7 +4,7 @@ layout: resource
 
 # Sending and Retrieving Information
 
-This page has example code snippets demonstrating how to send and retrieve information through the Figshare API. The [documentation site](https://docs.figshare.com) has more details on all endpoints and includes information on GET, POST, PUT, and DELETE methods.
+This page has example code snippets demonstrating how to send and retrieve information through the Figshare API. You can paste the code into a Google Colab document to try them out. The [documentation site](https://docs.figshare.com) has more details on all endpoints and includes information on GET, POST, PUT, and DELETE methods.
 
 - [Return results](#return-results-get)
 - [Authenticate](#authenticate-get-post-put-delete)
