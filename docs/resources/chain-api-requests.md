@@ -2,7 +2,7 @@
 layout: resource
 ---
 
-# Chain api calls to retrieve information
+# Chain api requests to retrieve information
 
 The page illustrates how to use multiple API calls to retrieve metadata or files from multiple items. The basic idea is to:
 1. Create a list of item ids
@@ -23,7 +23,7 @@ import json
 import requests
 #Retrieve list of private metadata for 50 items. This is for unpublished and published records.
 #Set the base URL
-BASE_URL = 'https://api.figshare.com/v2'
+BASE_URL = 'https://api.figshare.com/v2'  <-------- Change figshare to figsh if working with the sandbox 
 #Set the token in the header
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 #Get items owned by account
@@ -196,3 +196,4 @@ print('All done.')
 ```
 Output: The download script will save files to folders named for the item id the files belong to
 ![picture of a folder window with two folders of downloaded files](../assets/download-folders.jpg)
+
