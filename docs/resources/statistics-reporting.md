@@ -11,7 +11,7 @@ The stats endpoints might be used for a variety of reporting purposes:
 3. Harvest item specific statistics for analysis with other metadata
 4. And many more
 
-The script for an [author report](./author-report.html) is a good example of a report an individual could run periodically.
+The script for an [author report](./author-report.html) is a good example of a report that an individual could run periodically.
 
 ## Creating Dashboards
 

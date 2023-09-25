@@ -4,6 +4,8 @@ layout: resource
 
 # Formatting JSON
 
+This is formatting using Python.
+
 ## Formatting json to send
 ### Authors
 Format authors as part of creating a new item. 
@@ -72,7 +74,7 @@ Output:
   'doi': '10.29033/6575'}]
 ```
 
-## Formatting downloaded json
+## Formatting json downloaded from Figshare API
 
 ### Dates
 If you downloaded metadata and want to format the dates in a dataframe:
