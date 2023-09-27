@@ -28,7 +28,7 @@ This workshop will focus on using the REST and Stats APIs.
 
 ## How to use the documentation
 
-There are three panes on the documentation site
+There are three panes on the [documentation site](https://docs.figshare.com)
 1. Left side: Table of Contents with links to the endpoints and documentation sections
 2. Middle: Endpoint details including the endpoint syntax, a short description, error information, and some endpoints can be called directly in this pane
 3. Right side: Input and Output examples.
@@ -687,7 +687,11 @@ Output:
 
 Choose one or more of these examples to try
 
+No need for an account or access to your own repository:
 - [Gather records for one author and output basic record information](../resources/author-report.html)
+- [Search for your institution's name across all Figshare repositories](../resources/institution-search.html)
+
+For these you need your own account or access to a Figshare powered repository or sandbox
 - [Batch format and upload metadata from a Dimensions harvest](../resources/batch-upload-from-source.html)
 - [Retrieve metadata for items in review](../resources/get-review-items.html)
 - [Download metadata and stats for a custom repository dashboard](../resources/example-metadata-download.html)
