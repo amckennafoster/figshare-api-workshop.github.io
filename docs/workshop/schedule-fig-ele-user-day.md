@@ -8,7 +8,7 @@ Here are instructions on how to use your institution's stage repository and the 
 
 Table of contents:
 - [Figshare API brief overview](#the-figshare-api)
-- [Using the API without scripting] (#using-the-API-without-scripting
+- [Using the API without scripting] (#using-the-API-without-scripting)
 - [Using scripts to access the API](#using-scripts-to-access-the API)
 - [Chain api requests to retrieve information](#chain-api-requests-to-retrieve-information)
 - [Example metadata workflows](#example-metadta-workflows)
@@ -16,13 +16,15 @@ Table of contents:
  
 
 # The Figshare API
-Figshare actually has 4 different APIs:
+The Figshare API has evolved over time and there are actually 4 different APIs:
 - REST API: https://api.figshare.com/v2
 - Stats API: https://stats.figshare.com/ 
 - OAI-PMH: https://api.figshare.com/v2/oai 
 - ResourceSync: https://scholardata.sun.ac.za/.well-known/resourcesync
 
-# Using the API without scripting
+This workshop will focus on using the REST and Stats APIs.
+
+# Using the APIs without scripting
 
 ## How to use the documentation
 
@@ -113,7 +115,7 @@ Python:
 import json
 import requests
 #Set the base URL and ITEM_ID
-BASE_URL = 'https://api.figshare.com/v2'  <-------- Change figshare to figsh if working with the sandbox 
+BASE_URL = 'https://api.figshare.com/v2'  #<-------- Change figshare to figsh if working with the sandbox 
 ITEM_ID = 123456
 #Retrieve public metadata from the endpoint
 s=requests.get(BASE_URL + '/articles/' + str(ITEM_ID))
@@ -268,7 +270,7 @@ Python:
 import json
 import requests
 #Set the base URL
-BASE_URL = 'https://api.figshare.com/v2' <-------- Change figshare to figsh if working with the sandbox 
+BASE_URL = 'https://api.figshare.com/v2' #<-------- Change figshare to figsh if working with the sandbox 
 #Set the token in the header
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 #Retrieve basic metadata for 10 items your account owns
@@ -279,7 +281,7 @@ metadata=json.loads(r.text)
 print(metadata)
 ```
 
-Output:
+Example Output:
 ```
 [
   {
@@ -508,7 +510,7 @@ Python:
 import json
 import requests
 #Set the base URL
-BASE_URL = 'https://api.figshare.com/v2' <-------- Change figshare to figsh if working with the sandbox 
+BASE_URL = 'https://api.figshare.com/v2' #<-------- Change figshare to figsh if working with the sandbox 
 #Set the token in the header
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 #Create json formatted for upload
@@ -685,10 +687,10 @@ Output:
 
 Choose one or more of these examples to try
 
-- [Gather records for one author and output basic record information](./resources/author-report.html)
-- [Batch format and upload metadata from a Dimensions harvest](./resources/batch-upload-from-source.html)
-- [Retrieve metadata for items in review](./resources/get-review-items.html)
-- [Download metadata and stats for a custom repository dashboard](./resources/example-metadata-download.html)
+- [Gather records for one author and output basic record information](../resources/author-report.html)
+- [Batch format and upload metadata from a Dimensions harvest](../resources/batch-upload-from-source.html)
+- [Retrieve metadata for items in review](../resources/get-review-items.html)
+- [Download metadata and stats for a custom repository dashboard](../resources/example-metadata-download.html)
 <br>
 
 # Other resources
