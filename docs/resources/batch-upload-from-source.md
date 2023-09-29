@@ -25,26 +25,24 @@ import json
 import requests
 import pandas as pd
 
+
+#Set the token directly (don't share this notebook with this information)
+TOKEN = "ENTER TOKEN HERE WITH QUOTES"
+
 #Set the token in the header and base URL (change the file name and location)
+#text_file = open("../../../testing-token-symlilliput.txt", "r")
+#TOKEN = text_file.read()
+#TOKEN.strip() #removes any hidden spaces
+#text_file.close()
 
-text_file = open("../../../testing-token-symlilliput.txt", "r")
-TOKEN = text_file.read()
-TOKEN.strip() #removes any hidden spaces
-text_file.close()
-
-#Alternatively, you can just enter your token here and comment out the method above.
-#TOKEN = str(ENTER TOKEN HERE WITH QUOTES)
 
 api_call_headers = {'Authorization': 'token ' + TOKEN}
 
 #Set the base URL
-BASE_URL = 'https://api.figshare.com/v2'
+BASE_URL = 'https://api.figshare.com/v2'  #<--------- If using a sandbox, change this to 'https://api.figsh.com/v2'
 
-#Upload a json file in case you want to try your own harvested metadata
-#with open("NAME.json", "r", encoding='utf8') as read_file: #Replace this with the filename of your choice
-#    jsonfile = json.load(read_file)
-
-#For demonstration, create a json file with 2 records- this is json formatted metadata from the Dimensions API
+#For demonstration, create a json file with 2 records- this is json formatted metadata from the Dimensions API.
+#Feel free to change the information below so you can easily find these examples if using a shared sandbox
 jsonfile = [
 	{
 		"abstract": "As robots are deployed to work in our environments, we must build appropriate expectations of their behavior so that we can trust them to perform their jobs autonomously as we attend to other tasks. Many types of explanations for robot behavior have been proposed, but they have not been fully analyzed for their impact on aligning expectations of robot paths for navigation. In this work, we evaluate several types of robot navigation explanations to understand their impact on the ability of humans to anticipate a robot’s paths. We performed an experiment in which we gave participants an explanation of a robot path and then measured (i) their ability to predict that path, (ii) their allocation of attention on the robot navigating the path versus their own dot-tracking task, and (iii) their subjective ratings of the robot’s predictability and trustworthiness. Our results show that explanations do significantly affect people’s ability to predict robot paths and that explanations that are concise and do not require readers to perform mental transformations are most effective at reducing attention to the robot.",

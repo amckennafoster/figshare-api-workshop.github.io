@@ -4,13 +4,13 @@ layout: resource
 
 # Get metadata for items in review
 
-There are several API endpoints that provide <a href="https://docs.figshare.com/#account_institution_curations" target="_blank">review/curation information</a>. Reviewers can sort and inspect items in for review through the GUI. But maybe you'd like to see a spreadsheet of the metadata for items that have a 'pending' status for review. 
+There are several API endpoints that provide <a href="https://docs.figshare.com/#account_institution_curations" target="_blank">review/curation information</a>. Reviewers can sort and inspect items in review through the GUI. But maybe you'd like to see a spreadsheet of the metadata for items that have a 'pending' status for review. 
 This <a href="https://colab.research.google.com/drive/1vATcAQfK2hEuX-UYAutrj5iQnAoL6Hfn?usp=sharing" target="_blank">Google Colab notebook</a> (also available as a <a href="https://github.com/amckennafoster/figshare-api-scripts/blob/main/download-metadata-admin/RETRIEVE-ITEMS-IN-REVIEW.ipynb" target="_blank">Jupyter notebook</a>) does just that. Be sure to use an admin token (not just a reviewer account token).
 
 Here are the steps in that notebook:
 
 1. Retrieve a list of items with pending status in review
-2. Visit each item and retrieve all the metadata
+2. Visit each item and retrieve all the metadata. Also add the owner name and email.
 3. Create a spreadsheet and do some formatting: dates, authors, add item owner, separate out custom fields.
 4. Save the spreadsheet
 

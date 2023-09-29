@@ -9,9 +9,9 @@ Here are instructions on how to use your institution's stage repository and the 
 Table of contents:
 - [Figshare API brief overview](#the-figshare-api)
 - [Using the API without scripting] (#using-the-API-without-scripting)
-- [Using scripts to access the API](#using-scripts-to-access-the API)
+- [Using scripts to access the API](#using-scripts-to-access-the-api)
 - [Chain api requests to retrieve information](#chain-api-requests-to-retrieve-information)
-- [Example metadata workflows](#example-metadta-workflows)
+- [Example metadata workflows](#example-metadata-workflows)
 - [Other resources](#other-resources)
  
 
@@ -685,7 +685,7 @@ Output:
 <br>
 # Example metadata workflows
 
-Choose one or more of these examples to try
+We will walk through these examples together.
 
 No need for an account or access to your own repository:
 - [Gather records for one author and output basic record information](../resources/author-report.html)
@@ -695,8 +695,8 @@ For these you need your own account or access to a Figshare powered repository o
 - [Batch format and upload metadata from a Dimensions harvest](../resources/batch-upload-from-source.html)
 - [Retrieve metadata for items in review](../resources/get-review-items.html)
 - [Download metadata and stats for a custom repository dashboard](../resources/example-metadata-download.html)
-<br>
 
+<br>
 # Other resources
 - A variety of other scripts can be [found here](https://github.com/amckennafoster/figshare-api-scripts) and [this help page](https://help.figshare.com/article/how-to-use-the-figshare-api) links to Google Colab versions of some of those scripts
 - There are many other [GitHub repos](https://github.com/search?q=figshare&type=repositories) for Figshare related workflows or integrations
