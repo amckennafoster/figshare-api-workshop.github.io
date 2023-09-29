@@ -286,6 +286,7 @@ api_call_headers = {'Authorization': 'token ' + TOKEN}
 
 ```
 
+Here is what your Colab notebook might look like:
 ![Image of the code in a Google Colab notebook](../assets/import-set-header.png)
 
 
