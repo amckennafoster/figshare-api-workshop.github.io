@@ -8,7 +8,7 @@ Here are instructions on how to use your institution's stage repository and the 
 
 Table of contents:
 - [Figshare API brief overview](#the-figshare-api)
-- [Using the API without scripting] (#using-the-apis-without-scripting)
+- [Using the API without scripting](#using-the-apis-without-scripting)
 - [Using scripts to access the API](#using-scripts-to-access-the-api)
 - [Chain api requests to retrieve information](#chain-api-requests-to-retrieve-information)
 - [Example metadata workflows](#example-metadata-workflows)
