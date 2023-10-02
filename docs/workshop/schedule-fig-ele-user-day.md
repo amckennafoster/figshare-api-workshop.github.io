@@ -2,7 +2,7 @@
 layout: workshop-lesson
 ---
 
-# Figshare API Workshop - Figshare Elements User Day
+# Figshare API Workshop - Figshare Symplectic User Day
 
 Here are instructions on how to use your institution's stage repository and the workshop [sandbox repository](./sandbox-instructions.html).
 
