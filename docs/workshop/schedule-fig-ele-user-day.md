@@ -296,6 +296,7 @@ In the example below, a user retrieves 10 basic metadata records from their pers
 
 Python:
 ```py
+#Get basic item metadata from your account
 #Libraries should already be imported, Base URL created, and authentication header created.
 
 #Retrieve basic metadata for 10 items your account owns
@@ -303,7 +304,8 @@ r=requests.get(BASE_URL + '/account/articles?page=1&page_size=10', headers=api_c
 #Load the metadata as JSON
 metadata=json.loads(r.text)
 #View the metadata for the first record
-metadata[0]
+print('There are',len(metadata),'metadata records. First record:')
+print(json.dumps(metadata[0], indent=2))
 ```
 
 Example Output:
@@ -342,6 +344,7 @@ Sending information through a POST or PUT endpoint is accomplished by adding a '
 
 Python:
 ```py
+#Create a record
 #Libraries should already be imported, Base URL created, and authentication header created.
 
 #Create json formatted for upload
@@ -372,6 +375,7 @@ These examples are set up for the stage environment. Change the BASE_URL to figs
 
 ### Retrieve item ids in your account
 ```py
+#Get item ids from your account
 #Libraries should already be imported, Base URL created, and authentication header created.
 
 #Retrieve list of private metadata for 10 items. This is for unpublished and published records.
@@ -391,7 +395,7 @@ item_ids = [item['id'] for item in items]
 This example searches for records with that use the category 'Digital Humanities' or 'Environmental Humanities'
 
 ```py
-
+#Get item ids by search
 #Libraries should already be imported, Base URL created, and authentication header created.
 
 categories = ["'History and Philosophy of the Humanities'","'Environmental Humanities'"]
@@ -421,7 +425,7 @@ print(item_ids)
 If you are at an institution (or not!), you may want to gather all the items in a particular group. The script below does just that. *Note: It only returns items published in the specific group. It does not return results for subgroups*
 
 ```py
-
+#Get item ids for a group
 #Libraries should already be imported, Base URL created, and authentication header created.
 
 INST_ID = 3682 #Institution ID, this example is for Global University. You don't have to include this- Group is is enough
@@ -452,10 +456,8 @@ print(item_ids)
 Use one of the methods above to create a list of item ids called item_ids.
 
 ```py
-
+#Gather full metadata for each item id in a list
 #Libraries should already be imported, Base URL created, and authentication header created.
-
-#---IF NOT ALREADY COLLECTED, INSERT CODE TO COLLECT ITEM IDS HERE----
 
 full_records = [] #Create a blank list to hold the JSON metadata records
 for id_value in item_ids: 
@@ -473,8 +475,7 @@ The options for views, downloads, and shares are described here: <a href="https:
 In the example below, the total views and downloads for each item id are collected. *Note that this script uses the pandas package to create a table of values.*
 
 ```py
-
-#---IF NOT ALREADY COLLECTED, INSERT CODE TO COLLECT ITEM IDS HERE----
+#Gather views and downloads for item ids in a list
 
 #Set the base URL for the stats endpoints
 BASE_URL2 = 'https://stats.figsh.com'
