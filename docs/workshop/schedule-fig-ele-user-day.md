@@ -77,15 +77,15 @@ You can retrieve information in this way for items, Projects, and Collections.
 
 
 ## API authentication
-- REST API - account token: https://help.figshare.com/article/how-to-get-a-personal-token
-- Stats API - Views/downloads/shares for items/collections/projects no authentication needed. Within institution scope, separate username/password required, contact support@figshare.com to get credentials for your institution.
 
-Credentials are sent to the API server via the Authorization header. **Make sure credentials are stored in a secure location!**
+Credentials are sent to the API server via the Authorization header. 
 
+- REST API - instructions on how to create a token in your institution's sandbox repository and the workshop [sandbox repository](./sandbox-instructions.html). **For the workshop, put your token in a note or notepad document**
+- Stats API - Views/downloads/shares for items/collections/projects no authentication needed. Within institution scope, separate username/password required, contact support@figshare.com to get credentials for your institution. For the workshop, these credentials can be provided.
 
 > ### Try it out 4 - authenticate and send metadata to create a new item
 > 
-> 1. Create a token for your personal account or the sandbox account ([sandbox instructions](./sandbox-instructions.html)).
+> 1. Create a token for your personal account or the sandbox account
 > 2. Navigate to the documentation site (here for personal accounts or here for sandbox accounts) and paste your token in the upper left field.
 > 3. On the left panel, click 'Articles' and then click 'Private article', then 'Create new article'. This endpoint accepts JSON formatted metadata and creates a draft article in the account linked to the token you used.
 > 4. Copy the JSON below and paste it into the Parameters box (replace 'YOUR NAME' with your name). Click the red 'Try' button.
@@ -103,14 +103,12 @@ Credentials are sent to the API server via the Authorization header. **Make sure
 
 The following examples illustrate how you can retrieve, send, and update information through the API. You can paste the code into a <a href="https://colab.research.google.com/?utm_source=scs-index" target="_blank">Google Colab document</a> (requires Google account) to try them out. The <a href="https://docs.figshare.com" target="_blank">documentation site</a> has more details on all endpoints and includes information on GET, POST, PUT, and DELETE methods.
 
-- [Return results](#return-results-get)
-- [Authenticate](#authenticate-get-post-put-delete)
-- [Send data](#send-data-post-put)
-
 
 ### Return results (GET)
 
 Any public metadata or files can be retrieved through the API without authentication. In the example below, the full metadata record for an item is retrieved. The ITEM_ID is the number at the end of any item's URL.
+
+**TRY THIS** 
 
 Python:
 ```py
@@ -263,9 +261,11 @@ Output:
 ```
 
 
-### Authenticate (GET, POST, PUT, DELETE)
+### Authenticate
 
 Authentication is required for any endpoint that retrieves or accepts private or institutional information. A token can be <a href="https://help.figshare.com/article/how-to-get-a-personal-token" target="_blank">created for any user account</a> and provides access in line with the account's privileges.
+
+**YOU MUST ADD THE FOLLOWING TO YOUR COLAB NOTEBOOK**
 
 In your Google Colab notebook add your token to the following code, paste into a cell in the notebook and run it. The examples in this section will use these credentials.
 
@@ -291,6 +291,8 @@ Here is what your Colab notebook might look like:
 
 
 In the example below, a user retrieves 10 basic metadata records from their personal account. These records may include both public and private (draft) records. Note that the results are limited to 10 by using the page and page_size parameters. 
+
+**TRY THIS- Retrieve account records**
 
 Python:
 ```py
@@ -336,6 +338,8 @@ Example Output:
 
 Sending information through a POST or PUT endpoint is accomplished by adding a 'data' variable to the request. The contents of the data variable needs to be formatted as indicated by the documentation for the API endpoint. In the example below, a new record is added to the account that created the token.
 
+**TRY THIS- Create a record**
+
 Python:
 ```py
 #Libraries should already be imported, Base URL created, and authentication header created.
@@ -356,16 +360,15 @@ The page illustrates how to use multiple API calls to retrieve metadata or files
 1. Create a list of item ids
  - [Retrieve item ids in your account](#retrieve-item-ids-in-your-account)
  - [Retrieve item ids through a search query](#retrieve-item-ids-through-a-search-query)
+ - [Retrieve item ids in a group](#retrieve-item-ids-in-a-group)
 2. Loop through the list and gather the information needed for each item id 
  - [Full metadata](#full-metadata)
  - [Views and Downloads](#views-and-downloads)
- - [Download file(s)](#download-files)
 
-The code loops through a list of item ids using <a href="https://wiki.python.org/moin/ForLoop" target="_blank">"for loops"</a>.
 <br>
-## First retrieve item ids
+## Retrieve item ids
 
-These examples are set up for the stage environment. Change the base url to figshare.com to use production.
+These examples are set up for the stage environment. Change the BASE_URL to figshare.com to use production.
 
 ### Retrieve item ids in your account
 ```py
@@ -507,11 +510,11 @@ Output:
 
 We will walk through these examples together.
 
-No need for an account or access to your own repository:
+Examples that do not need an account or access to your own repository:
 - [Gather records for one author and output basic record information](../resources/author-report.html)
 - [Search for your institution's name across all Figshare repositories](../resources/institution-search.html)
 
-For these you need your own account or access to a Figshare powered repository or sandbox
+Examples that require an account or access to a Figshare powered repository or sandbox
 - [Batch format and upload metadata from a Dimensions harvest](../resources/batch-upload-from-source.html)
 - [Retrieve metadata for items in review](../resources/get-review-items.html)
 - [Download metadata and stats for a custom repository dashboard](../resources/example-metadata-download.html)
