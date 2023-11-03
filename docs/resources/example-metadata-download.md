@@ -25,4 +25,4 @@ The <a href="https://colab.research.google.com/drive/17GtCZHfRT6kDe_Rbrj9EkIpnxy
 
 ## Visualize the data
 
-You should be able to use the resulting spreadsheet as a data source for you favorite visualization software. We made a very basic proof of concept <a href="https://lookerstudio.google.com/reporting/21c1ab3b-f1a1-44dd-9bc0-ff8665650a5c" target="_blank">Looker Studio</a> dashboard based on data from a live repository.
+You should be able to use the resulting spreadsheet as a data source for you favorite visualization software. We made a very basic proof of concept <a href="https://lookerstudio.google.com/s/lO03gLNcLLA" target="_blank">Looker Studio</a> dashboard based on data from a live repository.
