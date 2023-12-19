@@ -4,6 +4,6 @@ layout: resource
 
 # Workshop Links
 
-- [Figshare/Symplectic User Day API Workshop](../workshop/schedule-fig-ele-user-day.html)
+- [General API Workshop](../workshop/general-workshop.html)
 
 - [2023 Open Repositories South Africa](../workshop/schedule-open-repositories.html)
