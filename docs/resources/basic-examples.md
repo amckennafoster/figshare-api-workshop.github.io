@@ -2,17 +2,17 @@
 layout: resource
 ---
 
-# Sending and Retrieving Information
+# API Basic Examples
 
-This page has example code snippets demonstrating how to send and retrieve information through the Figshare API. You can paste the code into a Google Colab document to try them out. The [documentation site](https://docs.figshare.com) has more details on all endpoints and includes information on GET, POST, PUT, and DELETE methods.
+This page has example code snippets demonstrating how to send, retrieve, authenticate, and impersonate information through the Figshare API. You can paste the code into a Google Colab document to try them out. The [documentation site](https://docs.figshare.com) has more details on all endpoints and includes information on GET, POST, PUT, and DELETE methods.
 
-- [Return results](#return-results-get)
-- [Authenticate](#authenticate-get-post-put-delete)
-- [Send data](#send-data-post-put)
-- [Impersonate](#impersonate-get-post-put-delete)
+- [Retrieve data](#retrieve-data)
+- [Authenticate](#authenticate)
+- [Send data](#send-data)
+- [Impersonate](#impersonate)
 
 
-### Return results (GET)
+### Retrieve data
 
 Any public metadata or files can be retrieved through the API without authentication. In the example below, the full metadata record for an item is retrieved. The ITEM_ID is the number at the end of any item's URL.
 
@@ -167,7 +167,7 @@ Output:
 ```
 
 
-### Authenticate (GET, POST, PUT, DELETE)
+### Authenticate
 
 Authentication is required for any endpoint that retrieves or accepts private or institutional information. A token can be [created for any user account](https://help.figshare.com/article/how-to-get-a-personal-token) and provides access in line with the account's privileges. In the example below, a user retrieves 10 basic metadata records from their personal account. These records may include both public and private (draft) records. Note that the results are limited to 10 by using the page and page_size parameters. 
 
@@ -177,7 +177,7 @@ import json
 import requests
 #Set the base URL
 BASE_URL = 'https://api.figshare.com/v2'
-#Set the token in the header
+#Set the token for the header
 api_call_headers = {'Authorization': 'token ENTER-TOKEN'} #example: {'Authorization': 'token dkd8rskjdkfiwi49hgkw...'}
 #Retrieve basic metadata for 10 items your account owns
 r=requests.get(BASE_URL + '/account/articles?page=1&page_size=10', headers=api_call_headers)
@@ -407,7 +407,7 @@ Output:
 ]
 ```
 
-### Send data (POST, PUT)
+### Send data
 
 Sending information through a POST or PUT endpoint is accomplished by adding a 'data' variable to the request. The contents of the data variable needs to be formatted as indicated by the documentation for the API endpoint. In the example below, a new record is added to the account that created the token.
 
@@ -428,7 +428,7 @@ if r.status_code == 201: #If Post was successful
   print('Successfully created item')
 ```
 
-### Impersonate (GET, POST, PUT, DELETE)
+### Impersonate
 
 Impersonation is acheived by adding "impersonate":*account id* to the data content. You must authenticate with a token created from an administrator account for this to work. In the example below, an existing record is updated (using PUT) in a user account by adding "impersonate" = account_id to updated metadata values. *Note: for these metadata updates to be public, a second API endpoint should be used to publish the record. Or it can be done through the user interface.*
 
