@@ -4,9 +4,17 @@ layout: resource
 
 # Formatting JSON
 
-This is formatting using Python.
+Examples on this page use Python.
 
-## Formatting json to send
+- [Formatting JSON to send](#formatting-json-to-send)
+    - [Dates to send](#dates-to-send)
+	- [Format existing JSON](#format-existing-json)
+- [Formatting json downloaded from Figshare API](#formatting-json-downloaded-from-Figshare-api)
+	- [Dates for retrieved information](#dates-for-retrieved-information)
+	- [Group information](#group-information)
+	- [Custom field](#dates -for-retrieved-information)
+
+## Formatting JSON to send
 ### Authors
 Format authors as part of creating a new item. 
 ```py
@@ -19,7 +27,7 @@ for item in json_metadata:
 		authors.append(authorname)
 
 ```
-### Dates
+### Dates to send
 Format a partial date for use in Figshare (partial date support is on the roadmap)
 ```py
 
@@ -74,9 +82,10 @@ Output:
   'doi': '10.29033/6575'}]
 ```
 
-## Formatting json downloaded from Figshare API
+## Formatting JSON downloaded from Figshare API
 
-### Dates
+### Dates for retrieved information
+
 If you downloaded metadata and want to format the dates in a dataframe:
 ```py
 
