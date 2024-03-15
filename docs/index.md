@@ -8,25 +8,28 @@ You can use the Figshare API to automate record management, gather statistics, o
 
 *Note:* Interested in migrating records in batch? This is certainly possible through the API. However, if you are a repository manager at an institution, the <a href="https://help.figshare.com/article/administrative-batch-management" target="_blank">Batch Management Tool</a> may be an easier option for you.
 
-On this page:
+**On this page:**
 - [Advice and guidance](#advice-and-guidance)
-- [Retrieve data](#retrieve-data)
-- [Send data](#send-data)
-- [Authenticate](#authenticate)
+- Basic examples:
+    - [Retrieve data](#retrieve-data)
+    - [Authenticate](#authenticate)
+    - [Send data](#send-data)
 - [Retrieve information for multiple items](#retrieve-information-for-multiple-items)
     - [Retrieve item ids in your account](#retrieve-item-ids-in-your-account)
     - [Retrieve item ids through a search query](#retrieve-item-ids-through-a-search-query)
     - [Gather full metadata for item ids](#full-metadata)
     - [Gather views and downloads for item ids](#views-and-downloads)
     - [Download file(s) for item ids](#download-files)
-- [Example workflows](#example-workflows)
+- Example workflows
     - [Create an author report](#create-an-author-report)
-    - [Upload metadata and files and then publish the record](#upload-metadata-and-files)
-    - [Batch format and upload metadata from a datasource](#batch-format-and-upload)
-- [Administrator workflows and reporting](#retrieve-metadata-for-items-in-review)
+    - [Create records, upload files, and publish](#create-records-upload-files-and-publish)
+    - [Batch format and upload metadata from a source](#batch-format-and-upload-metadata-from-a-source)
+- Administrator workflows and reporting
     - [Retrieve metadata for items in review](#retrieve-metadata-for-items-in-review)
     - [Impersonatation user accounts](#impersonating-user-accounts)
-	- [Download metadata and stats for a custom repository dashboard](#create-a-repository-dashboard)
+	- [Create a repository stats dashboard](#create-a-repository-dashboard)
+	- [Search for records related to your institution](#search-for-records-related-to-your-institution)
+- [Custom Web Applicaitons](#custom-web-apps)
 
 ## Advice and Guidance
 - [Understanding the API documentation](./resources/understanding-api-documentation.html)
@@ -541,7 +544,7 @@ item_ids = [item['id'] for item in results]
 
 ### Now gather information for those item ids
 
-### Full metadata
+#### Full metadata
 Use one of the methods above to create a list of item ids called item_ids. This script includes an option to add a token in the header in case some of the item ids are for unpublished records.
 
 ```py
@@ -565,7 +568,7 @@ for id_value in item_ids:
 print(len(full_records),metadata records collected)
 ```
 
-### Views and Downloads
+#### Views and Downloads
 
 The options for views, downloads, and shares are described here: [https://docs.figshare.com/#stats](https://docs.figshare.com/#stats). Note that the endpoints for Breakdown and Timeline require a special administrator authentication that you can request for your institution through [https://support.figshare.com](https://support.figshare.com).
 
@@ -607,7 +610,7 @@ Output:
 |13259588|243|54|
 |1138718|7552|3030|
 
-### Download file(s)
+#### Download file(s)
 
 There are several ways to download files through the API. Each file that is part of a record has it's own download URL. You can find this URL in the full metadata retrieved through the API or you can enter the item id at this endpoint: [https://docs.figshare.com/#article_files](https://docs.figshare.com/#article_files). For item [https://doi.org/10.6084/m9.figshare.5616409.v3](https://doi.org/10.6084/m9.figshare.5616409.v3), the download URL for the file is [https://figshare.com/ndownloader/files/9778696](https://figshare.com/ndownloader/files/9778696). Visiting that URL will automatically start the download (*File is 219KB*).
 
@@ -640,7 +643,9 @@ for k in file_info:
 print('All done.')
 ```
 Output: The download script will save files to folders named for the item id the files belong to
-![picture of a folder window with two folders of downloaded files](../assets/download-folders.jpg)
+![picture of a folder window with two folders of downloaded files](./assets/download-folders.jpg)
+
+## Example workflows
 
 ### Create an author report
 
@@ -908,18 +913,18 @@ if __name__ == '__main__':
 
 #### Upload metadata and files in batch
 
-If your existing metadata includes a URL or local location for the associated file(s) you can combine the two example scripts on this page to upload multiple records with their files. Your existing metadata should be a list of dictionaries already formatted for upload (see the <a href="https://amckennafoster.github.io/figshare-api-workshop.github.io/resources/formatting.html" target="_blank">formatting page</a> for advice). Use a for loop to upload the metadata for each record, then upload the file(s).
+If your existing metadata includes a URL or local location for the associated file(s) you can upload the metadata and files. Your existing metadata should be a list of dictionaries already formatted for upload (see the <a href="https://amckennafoster.github.io/figshare-api-workshop.github.io/resources/formatting.html" target="_blank">formatting page</a> for advice). Use a for loop to upload the metadata for each record, then upload the file(s).
 
 
 
-# Create metadata records from harvested metadata
+### Batch format and upload metadata from a source
 
-This pages offers an example of creating lnked file records based on harvested metadata. The resulting items clearly indicate the URL or DOI the user can click to find the original record. The example below is for paper metadata, but it can easily work with data metadata too. Macquarie University created a script to <a href="https://github.com/mq-eresearch/dryad_to_figshare/tree/v1.0.0" target="_blank">create catalog records</a> in their repository from Dryad records.
+This offers an example of creating lnked file records based on harvested metadata. The resulting items clearly indicate the URL or DOI the user can click to find the original record. The example below is for paper metadata, but it can easily work with data metadata too. Macquarie University created a script to <a href="https://github.com/mq-eresearch/dryad_to_figshare/tree/v1.0.0" target="_blank">create catalog records</a> in their repository from Dryad records.
 
 
 Here are the steps to format metadata harvested from the Dimensions database and create linked file records:
 
-1. Open a json file
+1. Open a json file (in the code below, an example file from Dimensions is manually created)
 2. Pull out the relevant fields and give them the proper keys (account for partial dates, author formatting, and missing abstracts)
 3. Convert the json record to a string with double quotes
 4. Upload the record
@@ -928,7 +933,7 @@ Here are the steps to format metadata harvested from the Dimensions database and
 
 This can upload to a specific group with specific custom metadata. You can change the api key to upload to different accounts or use impersonation.
 
-Here is an example Python script. Note that this does not add Categories or Keywords which are required for publishing.
+Here is an example Python script. Note that this does not add Categories or Keywords which are required for publishing. 
 
 ```py
 import json
@@ -1270,7 +1275,28 @@ The <a href="https://colab.research.google.com/drive/17GtCZHfRT6kDe_Rbrj9EkIpnxy
 
 You should be able to use the resulting spreadsheet as a data source for you favorite visualization software. We made a very basic proof of concept <a href="https://lookerstudio.google.com/s/lO03gLNcLLA" target="_blank">Looker Studio</a> dashboard based on data from a live repository.
 
+### Search for records related to your institution
 
-### More Advanced Resources - Custom Web Apps and Custom User Interfaces
+You can search for your institution's name and do a high level analysis of the records out there. As an example, we created a <a href="https://colab.research.google.com/drive/15JGN6dx6OXfqQ2779TCmOhqQEOrLyt5u?usp=sharing" target="_blank">Jupyter Notebook in Google Colab</a>. 
 
-You can create custom interfaces to display information from your Figshare account or repository. Online tools, like ChatGPT, can help. This was demonstrated in the API workshop Figshare ran at the 2023 Open Repositories Conference. You can see the resources for this demonstration on the [workshop page](./workshop/workshop-custom-app.html) and [the workshop slides](../assets/Figshare-API-Workshop-Open-Repositories-2023.pdf).
+Anyone can run this script. One must only add search criteria and run all the cells in sequence. You can also save all the data as a Google sheet in your Google Drive.
+
+Here is the order of operations:
+1. Import libraries and set base API endpoint and institution name
+2. Search using this endpoint: https://docs.figshare.com/#articles_search and create a dataframe
+3. Collect the full metadata for each item and create separate lists for item metadata, authors, funding, categories, tags, and files.
+4. Do some formatting and make dataframes from all the lists
+5. Start analysis by looking at the main dataframe columns
+6. Look at how many records are from institutions (using the existence of group_id)
+7. Item types with views
+8. Look at licenses 
+9. See a list of linked funders (linked to Dimensions records)
+10. See grant titles
+11. See the top 20 tags
+12. See the top 20 categories
+13. See top 10 viewed items
+14. Export all the data to a Google sheet that you can then use for visualizations or other analysis
+
+### Custom Web Apps
+
+You can create custom interfaces to display information from your Figshare account or repository. Online tools, like ChatGPT, can help. This was demonstrated in the API workshop Figshare ran at the 2023 Open Repositories Conference. You can see the resources for this demonstration on the [workshop page](./workshop/workshop-custom-app.html) and [the workshop slides](./assets/Figshare-API-Workshop-Open-Repositories-2023.pdf).
