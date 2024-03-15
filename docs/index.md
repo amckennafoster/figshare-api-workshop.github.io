@@ -10,7 +10,7 @@ You can use the Figshare API to automate record management, gather statistics, o
 
 **On this page:**
 - [Advice and guidance](#advice-and-guidance)
-- Basic examples:
+- Basic examples
     - [Retrieve data](#retrieve-data)
     - [Authenticate](#authenticate)
     - [Send data](#send-data)
