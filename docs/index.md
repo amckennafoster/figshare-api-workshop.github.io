@@ -651,7 +651,9 @@ Output: The download script will save files to folders named for the item id the
 
 The API can provide information for individual authors. As an example, we created a <a href="https://colab.research.google.com/drive/1tl25Lc_SGk1OKjnMA54HeRaVM3VYUpYP?usp=sharing" target="_blank">Jupyter Notebook in Google Colab</a>. 
 
-Anyone can run this script, though you'll need to sign into a Google account to do so. Then you must only add an author name or an ORCID. The script produces a table with metadata for the author's outputs, views and downloads, and produces a plotly map of views for all the records.
+*Note*  The script retrieves statistics and if you want to do this for an account within an intsitutional repository, you need to adjust the stats urls in the script and will need your institution's stats credentials. See the note there. Also see the stats info in the 'Advice and Guidance' section at the top of the page.
+
+Anyone can run this script, though you'll need to sign into a Google account to do so. Then you must only add an author name or an ORCID. The script produces a table with metadata for the author's outputs, views and downloads, and produces a plotly map of views for all the records (stats will only be for records stored in figshare.com accounts). 
 
 Here is the order of operations:
 1. Import libraries and set base API URL
