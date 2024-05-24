@@ -24,6 +24,7 @@ You can use the Figshare API to automate record management, gather statistics, o
     - [Create an author report](#create-an-author-report)
     - [Create records, upload files, and publish](#create-records-upload-files-and-publish)
     - [Batch format and upload metadata from a source](#batch-format-and-upload-metadata-from-a-source)
+	- [Delete all or some of the items in an account](#delete-account-items) (useful when testing in stage or if you have lots of uneeded draft records.
 - Administrator workflows and reporting
     - [Retrieve metadata for items in review](#retrieve-metadata-for-items-in-review)
     - [Impersonatation user accounts](#impersonating-user-accounts)
@@ -651,7 +652,7 @@ Output: The download script will save files to folders named for the item id the
 
 The API can provide information for individual authors. As an example, we created a <a href="https://colab.research.google.com/drive/1tl25Lc_SGk1OKjnMA54HeRaVM3VYUpYP?usp=sharing" target="_blank">Jupyter Notebook in Google Colab</a>. 
 
-*Note*  The script retrieves statistics and if you want to do this for an account within an intsitutional repository, you need to adjust the stats urls in the script and will need your institution's stats credentials. See the note there. Also see the stats info in the 'Advice and Guidance' section at the top of the page.
+*Note*  The script retrieves statistics and if you want to do this for an account within an intsitutional repository, you need to adjust the stats urls in the script and will need your institution's stats credentials. See the notes in the script. Also see the stats info in the 'Advice and Guidance' section at the top of the page.
 
 Anyone can run this script, though you'll need to sign into a Google account to do so. Then you must only add an author name or an ORCID. The script produces a table with metadata for the author's outputs, views and downloads, and produces a plotly map of views for all the records (stats will only be for records stored in figshare.com accounts). 
 
@@ -1187,6 +1188,57 @@ print(success_count,"records created and updated. There were",len(result)-len(cr
 print('There were',len(partial_record_ids),'records created but with a failed DOI link.')
 print("Failed record descriptions:",record_fails)
 ```
+### Delete account items
+You may have many draft items in your account, or if you are an admin, perhaps you've been testing with the Batch Management Tool, and you want to remove items. 
+
+**Important Note:** You cannot delete public items. For figshare.com users, you must contact Figshare to unpublish an item. For institution admins, this script provides a way to get a list of item ids to unpublish.
+
+The following script uses a token from your account to get a list of both public and private/draft items in your account. If you only want to delete the current private items, you can pass the entire list of item ids to Figshare for deletion and Figshare will ignore requests to delete public items. If you are an admin who wants to delete everything, you'll need to paste the list of item ids into your admin unpublish interface (in the Administration area). Figshare will unpublish the public items and then you can finish running the script to delete all the item ids.
+
+``` py
+import json
+import requests
+import pandas as pd
+import csv
+
+#Set the token directly (delete the lines above)
+TOKEN = 'ENTER TOKEN BETWEEN SINGLE QUOTES'
+
+api_call_headers = {'Authorization': 'token ' + TOKEN}
+
+#Set the base URL
+BASE_URL = 'https://api.figsh.com/v2' <---If using a production repository or figshare.com account change this to https://api.figshare.com/v2
+
+
+#Now, gather records from your repository.
+
+repository_items = []
+num_pages = 1  #------> Change this as needed, but the code is set to gather 1000 records.
+
+for i in range(1,num_pages+1):
+    item = json.loads(requests.get(BASE_URL + '/account/articles?page_size=1000&page={}'.format(i), headers=api_call_headers).content)
+    repository_items.extend(item)
+print(len(repository_items),'metadata records collected')
+
+df = pd.DataFrame(repository_items)
+article_ids = df['id'].tolist()
+
+print("If you need to unpublish items, paste these ids (no square brackets) in your admin interface:",article_ids)
+
+
+#You may want to split this next block of code from the above blocks so that you can run it after unpublishing item ids.
+
+delete_article_fails = []
+
+for article in article_ids:
+    r = requests.delete(BASE_URL + '/account/articles/' + str(article), headers=api_call_headers)
+    if r.status_code != 204:
+        delete_article_fails.append(str(article) + ":" + str(r.content[0:75])) #Add failed index to list with partial description
+
+print(len(delete_article_fails), 'errors!')
+print('Fail descriptions:',delete_article_fails)
+```
+
 ### Retrieve metadata for items in review
 
 There are several API endpoints that provide <a href="https://docs.figshare.com/#account_institution_curations" target="_blank">review/curation information</a>. Reviewers can sort and inspect items in review through the GUI. But maybe you'd like to see a spreadsheet of the metadata for items that have a 'pending' status for review. 
