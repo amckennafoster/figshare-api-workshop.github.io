@@ -4,17 +4,19 @@ layout: default
 
 # Figshare API Resources
 
-
+<br>
+<br>
 
 <div style="background-color: #59c4bc; box-sizing: border-box; padding: 10px;">
-The information on this page and this site has moved to Figshare's help site: <a href="https://help.figshare.com/article/how-to-use-the-figshare-api">https://help.figshare.com/article/how-to-use-the-figshare-api</a>
+The information on this page and this site has moved to Figshare's help site: <a style="color: yellow;" href="https://help.figshare.com/article/how-to-use-the-figshare-api">https://help.figshare.com/article/how-to-use-the-figshare-api</a>
 </div>
 
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 You can use the Figshare API to automate record management, gather statistics, or even build custom web apps for users or administrators. 
 
