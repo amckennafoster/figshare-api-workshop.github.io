@@ -4,6 +4,18 @@ layout: default
 
 # Figshare API Resources
 
+
+
+<div style="background-color: #59c4bc; box-sizing: border-box; padding: 10px;">
+The information on this page and this site has moved to Figshare's help site: <a href="https://help.figshare.com/article/how-to-use-the-figshare-api">https://help.figshare.com/article/how-to-use-the-figshare-api</a>
+</div>
+
+
+
+
+
+
+
 You can use the Figshare API to automate record management, gather statistics, or even build custom web apps for users or administrators. 
 
 *Note:* Interested in migrating records in batch? This is certainly possible through the API. However, if you are a repository manager at an institution, the <a href="https://help.figshare.com/article/administrative-batch-management" target="_blank">Batch Management Tool</a> may be an easier option for you.
